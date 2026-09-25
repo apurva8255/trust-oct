@@ -1,0 +1,32 @@
+# OCT-Bench Global Configuration
+
+# Paths configuration
+paths:
+  raw_data_dir: "./data/raw"
+  processed_data_dir: "./data/processed"
+  generated_qa_dir: "./data/generated_qa"
+  reports_dir: "./reports"
+
+# Generation configuration
+generation:
+  provider: "openai"              # "openai" or "gemini"
+  model: "gpt-4o"                 # Default model name
+  temperature: 0.2
+  max_tokens: 1000
+
+# Evaluation configuration
+evaluation:
+  default_model: "gpt-4o"
+  batch_size: 5
+  output_format: "csv"
+
+# Visualization configurations (bounding box colors)
+visualization:
+  bbox_colors:
+    IRF: "purple"                 # Intraretinal Fluid
+    SRF: "blue"                   # Subretinal Fluid
+    PED: "red"                    # Pigment Epithelial Detachment
+    SHRM: "orange"                # Subretinal Hyperreflective Material
+    MH: "green"                   # Macular Hole
+    default: "yellow"
+  line_width: 3

@@ -1,0 +1,21 @@
+=== EVALUATION SUMMARY FOR MODEL: random-guess-baseline ===
+Overall Accuracy: 26.00%
+
+--- DIMENSION ACCURACIES ---
+Perception: 27.50%
+Cognition: 27.50%
+Reasoning: 20.00%
+
+--- DISEASE ACCURACIES ---
+CSC: 35.00%
+NORMAL: 20.00%
+AMD: 20.00%
+MH: 46.67%
+DME: 10.00%
+
+--- TASK-WISE ACCURACIES ---
+Task T01: 15.00%
+Task T06: 40.00%
+Task T09: 25.00%
+Task T12: 30.00%
+Task T17: 20.00%

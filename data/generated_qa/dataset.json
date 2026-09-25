@@ -1,0 +1,1842 @@
+[
+  {
+    "question_id": "Q_OCT_SCAN_002_T01",
+    "task_id": "T01",
+    "image_id": "OCT_SCAN_002",
+    "question": "What medical imaging modality is demonstrated in the provided scan?",
+    "options": {
+      "A": "MRI Scan",
+      "B": "Ultrasound",
+      "C": "CT Scan",
+      "D": "Optical Coherence Tomography (OCT)"
+    },
+    "correct_answer": "D",
+    "explanation": "The image presents high-resolution cross-sectional retinal layer bands, which is characteristic of an Optical Coherence Tomography (OCT) scan.",
+    "metadata": {
+      "disease_label": "NORMAL",
+      "rendered_image_path": "./data/generated_qa/images/OCT_SCAN_002_T01.png",
+      "dataset_source": "OIMHS",
+      "original_image_path": "./data/raw/images/OCT_SCAN_002.png"
+    }
+  },
+  {
+    "question_id": "Q_OCT_SCAN_002_T09",
+    "task_id": "T09",
+    "image_id": "OCT_SCAN_002",
+    "question": "Which anatomical region is highlighted in red in this OCT image?",
+    "options": {
+      "A": "Vitreous cavity",
+      "B": "Cornea",
+      "C": "Choroid layer",
+      "D": "Retina"
+    },
+    "correct_answer": "D",
+    "explanation": "The highlighted red area covers the neural retinal band bounded by the ILM above and the RPE line below.",
+    "metadata": {
+      "disease_label": "NORMAL",
+      "rendered_image_path": "./data/generated_qa/images/OCT_SCAN_002_T09.png",
+      "dataset_source": "OIMHS",
+      "original_image_path": "./data/raw/images/OCT_SCAN_002.png"
+    }
+  },
+  {
+    "question_id": "Q_OCT_SCAN_002_T12",
+    "task_id": "T12",
+    "image_id": "OCT_SCAN_002",
+    "question": "What type of retinal lesion is outlined by the bounding box in this image?",
+    "options": {
+      "A": "Intraretinal Fluid (IRF)",
+      "B": "Subretinal Fluid (SRF)",
+      "C": "Subretinal Hyperreflective Material (SHRM)",
+      "D": "NORMAL"
+    },
+    "correct_answer": "D",
+    "explanation": "The lesion displays characteristic features matching NORMAL based on boundary separation and reflectivity.",
+    "metadata": {
+      "disease_label": "NORMAL",
+      "rendered_image_path": "./data/generated_qa/images/OCT_SCAN_002_T12.png",
+      "dataset_source": "OIMHS",
+      "original_image_path": "./data/raw/images/OCT_SCAN_002.png"
+    }
+  },
+  {
+    "question_id": "Q_OCT_SCAN_002_T17",
+    "task_id": "T17",
+    "image_id": "OCT_SCAN_002",
+    "question": "Based on the structural changes observed in this OCT scan, what is the most likely clinical diagnosis?",
+    "options": {
+      "A": "Healthy Retina",
+      "B": "Diabetic Macular Edema (DME)",
+      "C": "Central Serous Chorioretinopathy (CSC)",
+      "D": "Macular pathology (NORMAL)"
+    },
+    "correct_answer": "D",
+    "explanation": "The presence of structural anomalies and liquid accumulation matches criteria for NORMAL.",
+    "metadata": {
+      "disease_label": "NORMAL",
+      "rendered_image_path": "./data/generated_qa/images/OCT_SCAN_002_T17.png",
+      "dataset_source": "OIMHS",
+      "original_image_path": "./data/raw/images/OCT_SCAN_002.png"
+    }
+  },
+  {
+    "question_id": "Q_OCT_SCAN_003_T01",
+    "task_id": "T01",
+    "image_id": "OCT_SCAN_003",
+    "question": "What medical imaging modality is demonstrated in the provided scan?",
+    "options": {
+      "A": "MRI Scan",
+      "B": "Ultrasound",
+      "C": "CT Scan",
+      "D": "Optical Coherence Tomography (OCT)"
+    },
+    "correct_answer": "D",
+    "explanation": "The image presents high-resolution cross-sectional retinal layer bands, which is characteristic of an Optical Coherence Tomography (OCT) scan.",
+    "metadata": {
+      "disease_label": "CSC",
+      "rendered_image_path": "./data/generated_qa/images/OCT_SCAN_003_T01.png",
+      "dataset_source": "OIMHS",
+      "original_image_path": "./data/raw/images/OCT_SCAN_003.png"
+    }
+  },
+  {
+    "question_id": "Q_OCT_SCAN_003_T06",
+    "task_id": "T06",
+    "image_id": "OCT_SCAN_003",
+    "question": "How many distinct pathological features are highlighted with annotation boxes in this OCT image?",
+    "options": {
+      "A": "0",
+      "B": "3",
+      "C": "2",
+      "D": "1"
+    },
+    "correct_answer": "D",
+    "explanation": "There are exactly 1 bounding boxes drawn, indicating the annotated lesions.",
+    "metadata": {
+      "disease_label": "CSC",
+      "rendered_image_path": "./data/generated_qa/images/OCT_SCAN_003_T06.png",
+      "dataset_source": "OIMHS",
+      "original_image_path": "./data/raw/images/OCT_SCAN_003.png"
+    }
+  },
+  {
+    "question_id": "Q_OCT_SCAN_003_T09",
+    "task_id": "T09",
+    "image_id": "OCT_SCAN_003",
+    "question": "Which anatomical region is highlighted in red in this OCT image?",
+    "options": {
+      "A": "Vitreous cavity",
+      "B": "Cornea",
+      "C": "Choroid layer",
+      "D": "Retina"
+    },
+    "correct_answer": "D",
+    "explanation": "The highlighted red area covers the neural retinal band bounded by the ILM above and the RPE line below.",
+    "metadata": {
+      "disease_label": "CSC",
+      "rendered_image_path": "./data/generated_qa/images/OCT_SCAN_003_T09.png",
+      "dataset_source": "OIMHS",
+      "original_image_path": "./data/raw/images/OCT_SCAN_003.png"
+    }
+  },
+  {
+    "question_id": "Q_OCT_SCAN_003_T12",
+    "task_id": "T12",
+    "image_id": "OCT_SCAN_003",
+    "question": "What type of retinal lesion is outlined by the bounding box in this image?",
+    "options": {
+      "A": "Intraretinal Fluid (IRF)",
+      "B": "Subretinal Fluid (SRF)",
+      "C": "Subretinal Hyperreflective Material (SHRM)",
+      "D": "SRF"
+    },
+    "correct_answer": "D",
+    "explanation": "The lesion displays characteristic features matching SRF based on boundary separation and reflectivity.",
+    "metadata": {
+      "disease_label": "CSC",
+      "rendered_image_path": "./data/generated_qa/images/OCT_SCAN_003_T12.png",
+      "dataset_source": "OIMHS",
+      "original_image_path": "./data/raw/images/OCT_SCAN_003.png"
+    }
+  },
+  {
+    "question_id": "Q_OCT_SCAN_003_T17",
+    "task_id": "T17",
+    "image_id": "OCT_SCAN_003",
+    "question": "Based on the structural changes observed in this OCT scan, what is the most likely clinical diagnosis?",
+    "options": {
+      "A": "Healthy Retina",
+      "B": "Diabetic Macular Edema (DME)",
+      "C": "Central Serous Chorioretinopathy (CSC)",
+      "D": "Macular pathology (CSC)"
+    },
+    "correct_answer": "D",
+    "explanation": "The presence of structural anomalies and liquid accumulation matches criteria for CSC.",
+    "metadata": {
+      "disease_label": "CSC",
+      "rendered_image_path": "./data/generated_qa/images/OCT_SCAN_003_T17.png",
+      "dataset_source": "OIMHS",
+      "original_image_path": "./data/raw/images/OCT_SCAN_003.png"
+    }
+  },
+  {
+    "question_id": "Q_OCT_SCAN_004_T01",
+    "task_id": "T01",
+    "image_id": "OCT_SCAN_004",
+    "question": "What medical imaging modality is demonstrated in the provided scan?",
+    "options": {
+      "A": "MRI Scan",
+      "B": "Ultrasound",
+      "C": "CT Scan",
+      "D": "Optical Coherence Tomography (OCT)"
+    },
+    "correct_answer": "D",
+    "explanation": "The image presents high-resolution cross-sectional retinal layer bands, which is characteristic of an Optical Coherence Tomography (OCT) scan.",
+    "metadata": {
+      "disease_label": "AMD",
+      "rendered_image_path": "./data/generated_qa/images/OCT_SCAN_004_T01.png",
+      "dataset_source": "OIMHS",
+      "original_image_path": "./data/raw/images/OCT_SCAN_004.png"
+    }
+  },
+  {
+    "question_id": "Q_OCT_SCAN_004_T06",
+    "task_id": "T06",
+    "image_id": "OCT_SCAN_004",
+    "question": "How many distinct pathological features are highlighted with annotation boxes in this OCT image?",
+    "options": {
+      "A": "0",
+      "B": "3",
+      "C": "2",
+      "D": "1"
+    },
+    "correct_answer": "D",
+    "explanation": "There are exactly 1 bounding boxes drawn, indicating the annotated lesions.",
+    "metadata": {
+      "disease_label": "AMD",
+      "rendered_image_path": "./data/generated_qa/images/OCT_SCAN_004_T06.png",
+      "dataset_source": "OIMHS",
+      "original_image_path": "./data/raw/images/OCT_SCAN_004.png"
+    }
+  },
+  {
+    "question_id": "Q_OCT_SCAN_004_T09",
+    "task_id": "T09",
+    "image_id": "OCT_SCAN_004",
+    "question": "Which anatomical region is highlighted in red in this OCT image?",
+    "options": {
+      "A": "Vitreous cavity",
+      "B": "Cornea",
+      "C": "Choroid layer",
+      "D": "Retina"
+    },
+    "correct_answer": "D",
+    "explanation": "The highlighted red area covers the neural retinal band bounded by the ILM above and the RPE line below.",
+    "metadata": {
+      "disease_label": "AMD",
+      "rendered_image_path": "./data/generated_qa/images/OCT_SCAN_004_T09.png",
+      "dataset_source": "OIMHS",
+      "original_image_path": "./data/raw/images/OCT_SCAN_004.png"
+    }
+  },
+  {
+    "question_id": "Q_OCT_SCAN_004_T12",
+    "task_id": "T12",
+    "image_id": "OCT_SCAN_004",
+    "question": "What type of retinal lesion is outlined by the bounding box in this image?",
+    "options": {
+      "A": "Intraretinal Fluid (IRF)",
+      "B": "Subretinal Fluid (SRF)",
+      "C": "Subretinal Hyperreflective Material (SHRM)",
+      "D": "Pigment Epithelial Detachment (PED)"
+    },
+    "correct_answer": "D",
+    "explanation": "The lesion displays characteristic features matching PED based on boundary separation and reflectivity.",
+    "metadata": {
+      "disease_label": "AMD",
+      "rendered_image_path": "./data/generated_qa/images/OCT_SCAN_004_T12.png",
+      "dataset_source": "OIMHS",
+      "original_image_path": "./data/raw/images/OCT_SCAN_004.png"
+    }
+  },
+  {
+    "question_id": "Q_OCT_SCAN_004_T17",
+    "task_id": "T17",
+    "image_id": "OCT_SCAN_004",
+    "question": "Based on the structural changes observed in this OCT scan, what is the most likely clinical diagnosis?",
+    "options": {
+      "A": "Healthy Retina",
+      "B": "Diabetic Macular Edema (DME)",
+      "C": "Central Serous Chorioretinopathy (CSC)",
+      "D": "Macular pathology (AMD)"
+    },
+    "correct_answer": "D",
+    "explanation": "The presence of structural anomalies and liquid accumulation matches criteria for AMD.",
+    "metadata": {
+      "disease_label": "AMD",
+      "rendered_image_path": "./data/generated_qa/images/OCT_SCAN_004_T17.png",
+      "dataset_source": "OIMHS",
+      "original_image_path": "./data/raw/images/OCT_SCAN_004.png"
+    }
+  },
+  {
+    "question_id": "Q_OCT_SCAN_005_T01",
+    "task_id": "T01",
+    "image_id": "OCT_SCAN_005",
+    "question": "What medical imaging modality is demonstrated in the provided scan?",
+    "options": {
+      "A": "MRI Scan",
+      "B": "Ultrasound",
+      "C": "CT Scan",
+      "D": "Optical Coherence Tomography (OCT)"
+    },
+    "correct_answer": "D",
+    "explanation": "The image presents high-resolution cross-sectional retinal layer bands, which is characteristic of an Optical Coherence Tomography (OCT) scan.",
+    "metadata": {
+      "disease_label": "NORMAL",
+      "rendered_image_path": "./data/generated_qa/images/OCT_SCAN_005_T01.png",
+      "dataset_source": "AMD-SD",
+      "original_image_path": "./data/raw/images/OCT_SCAN_005.png"
+    }
+  },
+  {
+    "question_id": "Q_OCT_SCAN_005_T06",
+    "task_id": "T06",
+    "image_id": "OCT_SCAN_005",
+    "question": "How many distinct pathological features are highlighted with annotation boxes in this OCT image?",
+    "options": {
+      "A": "0",
+      "B": "2",
+      "C": "1",
+      "D": "0"
+    },
+    "correct_answer": "D",
+    "explanation": "There are exactly 0 bounding boxes drawn, indicating the annotated lesions.",
+    "metadata": {
+      "disease_label": "NORMAL",
+      "rendered_image_path": "./data/generated_qa/images/OCT_SCAN_005_T06.png",
+      "dataset_source": "AMD-SD",
+      "original_image_path": "./data/raw/images/OCT_SCAN_005.png"
+    }
+  },
+  {
+    "question_id": "Q_OCT_SCAN_005_T09",
+    "task_id": "T09",
+    "image_id": "OCT_SCAN_005",
+    "question": "Which anatomical region is highlighted in red in this OCT image?",
+    "options": {
+      "A": "Vitreous cavity",
+      "B": "Cornea",
+      "C": "Choroid layer",
+      "D": "Retina"
+    },
+    "correct_answer": "D",
+    "explanation": "The highlighted red area covers the neural retinal band bounded by the ILM above and the RPE line below.",
+    "metadata": {
+      "disease_label": "NORMAL",
+      "rendered_image_path": "./data/generated_qa/images/OCT_SCAN_005_T09.png",
+      "dataset_source": "AMD-SD",
+      "original_image_path": "./data/raw/images/OCT_SCAN_005.png"
+    }
+  },
+  {
+    "question_id": "Q_OCT_SCAN_005_T12",
+    "task_id": "T12",
+    "image_id": "OCT_SCAN_005",
+    "question": "What type of retinal lesion is outlined by the bounding box in this image?",
+    "options": {
+      "A": "Intraretinal Fluid (IRF)",
+      "B": "Subretinal Fluid (SRF)",
+      "C": "Subretinal Hyperreflective Material (SHRM)",
+      "D": "NORMAL"
+    },
+    "correct_answer": "D",
+    "explanation": "The lesion displays characteristic features matching NORMAL based on boundary separation and reflectivity.",
+    "metadata": {
+      "disease_label": "NORMAL",
+      "rendered_image_path": "./data/generated_qa/images/OCT_SCAN_005_T12.png",
+      "dataset_source": "AMD-SD",
+      "original_image_path": "./data/raw/images/OCT_SCAN_005.png"
+    }
+  },
+  {
+    "question_id": "Q_OCT_SCAN_005_T17",
+    "task_id": "T17",
+    "image_id": "OCT_SCAN_005",
+    "question": "Based on the structural changes observed in this OCT scan, what is the most likely clinical diagnosis?",
+    "options": {
+      "A": "Healthy Retina",
+      "B": "Diabetic Macular Edema (DME)",
+      "C": "Central Serous Chorioretinopathy (CSC)",
+      "D": "Macular pathology (NORMAL)"
+    },
+    "correct_answer": "D",
+    "explanation": "The presence of structural anomalies and liquid accumulation matches criteria for NORMAL.",
+    "metadata": {
+      "disease_label": "NORMAL",
+      "rendered_image_path": "./data/generated_qa/images/OCT_SCAN_005_T17.png",
+      "dataset_source": "AMD-SD",
+      "original_image_path": "./data/raw/images/OCT_SCAN_005.png"
+    }
+  },
+  {
+    "question_id": "Q_OCT_SCAN_006_T01",
+    "task_id": "T01",
+    "image_id": "OCT_SCAN_006",
+    "question": "What medical imaging modality is demonstrated in the provided scan?",
+    "options": {
+      "A": "MRI Scan",
+      "B": "Ultrasound",
+      "C": "CT Scan",
+      "D": "Optical Coherence Tomography (OCT)"
+    },
+    "correct_answer": "D",
+    "explanation": "The image presents high-resolution cross-sectional retinal layer bands, which is characteristic of an Optical Coherence Tomography (OCT) scan.",
+    "metadata": {
+      "disease_label": "NORMAL",
+      "rendered_image_path": "./data/generated_qa/images/OCT_SCAN_006_T01.png",
+      "dataset_source": "OCTDL",
+      "original_image_path": "./data/raw/images/OCT_SCAN_006.png"
+    }
+  },
+  {
+    "question_id": "Q_OCT_SCAN_006_T06",
+    "task_id": "T06",
+    "image_id": "OCT_SCAN_006",
+    "question": "How many distinct pathological features are highlighted with annotation boxes in this OCT image?",
+    "options": {
+      "A": "0",
+      "B": "2",
+      "C": "1",
+      "D": "0"
+    },
+    "correct_answer": "D",
+    "explanation": "There are exactly 0 bounding boxes drawn, indicating the annotated lesions.",
+    "metadata": {
+      "disease_label": "NORMAL",
+      "rendered_image_path": "./data/generated_qa/images/OCT_SCAN_006_T06.png",
+      "dataset_source": "OCTDL",
+      "original_image_path": "./data/raw/images/OCT_SCAN_006.png"
+    }
+  },
+  {
+    "question_id": "Q_OCT_SCAN_006_T09",
+    "task_id": "T09",
+    "image_id": "OCT_SCAN_006",
+    "question": "Which anatomical region is highlighted in red in this OCT image?",
+    "options": {
+      "A": "Vitreous cavity",
+      "B": "Cornea",
+      "C": "Choroid layer",
+      "D": "Retina"
+    },
+    "correct_answer": "D",
+    "explanation": "The highlighted red area covers the neural retinal band bounded by the ILM above and the RPE line below.",
+    "metadata": {
+      "disease_label": "NORMAL",
+      "rendered_image_path": "./data/generated_qa/images/OCT_SCAN_006_T09.png",
+      "dataset_source": "OCTDL",
+      "original_image_path": "./data/raw/images/OCT_SCAN_006.png"
+    }
+  },
+  {
+    "question_id": "Q_OCT_SCAN_006_T12",
+    "task_id": "T12",
+    "image_id": "OCT_SCAN_006",
+    "question": "What type of retinal lesion is outlined by the bounding box in this image?",
+    "options": {
+      "A": "Intraretinal Fluid (IRF)",
+      "B": "Subretinal Fluid (SRF)",
+      "C": "Subretinal Hyperreflective Material (SHRM)",
+      "D": "NORMAL"
+    },
+    "correct_answer": "D",
+    "explanation": "The lesion displays characteristic features matching NORMAL based on boundary separation and reflectivity.",
+    "metadata": {
+      "disease_label": "NORMAL",
+      "rendered_image_path": "./data/generated_qa/images/OCT_SCAN_006_T12.png",
+      "dataset_source": "OCTDL",
+      "original_image_path": "./data/raw/images/OCT_SCAN_006.png"
+    }
+  },
+  {
+    "question_id": "Q_OCT_SCAN_006_T17",
+    "task_id": "T17",
+    "image_id": "OCT_SCAN_006",
+    "question": "Based on the structural changes observed in this OCT scan, what is the most likely clinical diagnosis?",
+    "options": {
+      "A": "Healthy Retina",
+      "B": "Diabetic Macular Edema (DME)",
+      "C": "Central Serous Chorioretinopathy (CSC)",
+      "D": "Macular pathology (NORMAL)"
+    },
+    "correct_answer": "D",
+    "explanation": "The presence of structural anomalies and liquid accumulation matches criteria for NORMAL.",
+    "metadata": {
+      "disease_label": "NORMAL",
+      "rendered_image_path": "./data/generated_qa/images/OCT_SCAN_006_T17.png",
+      "dataset_source": "OCTDL",
+      "original_image_path": "./data/raw/images/OCT_SCAN_006.png"
+    }
+  },
+  {
+    "question_id": "Q_OCT_SCAN_007_T01",
+    "task_id": "T01",
+    "image_id": "OCT_SCAN_007",
+    "question": "What medical imaging modality is demonstrated in the provided scan?",
+    "options": {
+      "A": "MRI Scan",
+      "B": "Ultrasound",
+      "C": "CT Scan",
+      "D": "Optical Coherence Tomography (OCT)"
+    },
+    "correct_answer": "D",
+    "explanation": "The image presents high-resolution cross-sectional retinal layer bands, which is characteristic of an Optical Coherence Tomography (OCT) scan.",
+    "metadata": {
+      "disease_label": "AMD",
+      "rendered_image_path": "./data/generated_qa/images/OCT_SCAN_007_T01.png",
+      "dataset_source": "OCTDL",
+      "original_image_path": "./data/raw/images/OCT_SCAN_007.png"
+    }
+  },
+  {
+    "question_id": "Q_OCT_SCAN_007_T06",
+    "task_id": "T06",
+    "image_id": "OCT_SCAN_007",
+    "question": "How many distinct pathological features are highlighted with annotation boxes in this OCT image?",
+    "options": {
+      "A": "0",
+      "B": "3",
+      "C": "2",
+      "D": "1"
+    },
+    "correct_answer": "D",
+    "explanation": "There are exactly 1 bounding boxes drawn, indicating the annotated lesions.",
+    "metadata": {
+      "disease_label": "AMD",
+      "rendered_image_path": "./data/generated_qa/images/OCT_SCAN_007_T06.png",
+      "dataset_source": "OCTDL",
+      "original_image_path": "./data/raw/images/OCT_SCAN_007.png"
+    }
+  },
+  {
+    "question_id": "Q_OCT_SCAN_007_T09",
+    "task_id": "T09",
+    "image_id": "OCT_SCAN_007",
+    "question": "Which anatomical region is highlighted in red in this OCT image?",
+    "options": {
+      "A": "Vitreous cavity",
+      "B": "Cornea",
+      "C": "Choroid layer",
+      "D": "Retina"
+    },
+    "correct_answer": "D",
+    "explanation": "The highlighted red area covers the neural retinal band bounded by the ILM above and the RPE line below.",
+    "metadata": {
+      "disease_label": "AMD",
+      "rendered_image_path": "./data/generated_qa/images/OCT_SCAN_007_T09.png",
+      "dataset_source": "OCTDL",
+      "original_image_path": "./data/raw/images/OCT_SCAN_007.png"
+    }
+  },
+  {
+    "question_id": "Q_OCT_SCAN_007_T12",
+    "task_id": "T12",
+    "image_id": "OCT_SCAN_007",
+    "question": "What type of retinal lesion is outlined by the bounding box in this image?",
+    "options": {
+      "A": "Intraretinal Fluid (IRF)",
+      "B": "Subretinal Fluid (SRF)",
+      "C": "Subretinal Hyperreflective Material (SHRM)",
+      "D": "Pigment Epithelial Detachment (PED)"
+    },
+    "correct_answer": "D",
+    "explanation": "The lesion displays characteristic features matching PED based on boundary separation and reflectivity.",
+    "metadata": {
+      "disease_label": "AMD",
+      "rendered_image_path": "./data/generated_qa/images/OCT_SCAN_007_T12.png",
+      "dataset_source": "OCTDL",
+      "original_image_path": "./data/raw/images/OCT_SCAN_007.png"
+    }
+  },
+  {
+    "question_id": "Q_OCT_SCAN_007_T17",
+    "task_id": "T17",
+    "image_id": "OCT_SCAN_007",
+    "question": "Based on the structural changes observed in this OCT scan, what is the most likely clinical diagnosis?",
+    "options": {
+      "A": "Healthy Retina",
+      "B": "Diabetic Macular Edema (DME)",
+      "C": "Central Serous Chorioretinopathy (CSC)",
+      "D": "Macular pathology (AMD)"
+    },
+    "correct_answer": "D",
+    "explanation": "The presence of structural anomalies and liquid accumulation matches criteria for AMD.",
+    "metadata": {
+      "disease_label": "AMD",
+      "rendered_image_path": "./data/generated_qa/images/OCT_SCAN_007_T17.png",
+      "dataset_source": "OCTDL",
+      "original_image_path": "./data/raw/images/OCT_SCAN_007.png"
+    }
+  },
+  {
+    "question_id": "Q_OCT_SCAN_008_T01",
+    "task_id": "T01",
+    "image_id": "OCT_SCAN_008",
+    "question": "What medical imaging modality is demonstrated in the provided scan?",
+    "options": {
+      "A": "MRI Scan",
+      "B": "Ultrasound",
+      "C": "CT Scan",
+      "D": "Optical Coherence Tomography (OCT)"
+    },
+    "correct_answer": "D",
+    "explanation": "The image presents high-resolution cross-sectional retinal layer bands, which is characteristic of an Optical Coherence Tomography (OCT) scan.",
+    "metadata": {
+      "disease_label": "CSC",
+      "rendered_image_path": "./data/generated_qa/images/OCT_SCAN_008_T01.png",
+      "dataset_source": "OIMHS",
+      "original_image_path": "./data/raw/images/OCT_SCAN_008.png"
+    }
+  },
+  {
+    "question_id": "Q_OCT_SCAN_008_T06",
+    "task_id": "T06",
+    "image_id": "OCT_SCAN_008",
+    "question": "How many distinct pathological features are highlighted with annotation boxes in this OCT image?",
+    "options": {
+      "A": "0",
+      "B": "3",
+      "C": "2",
+      "D": "1"
+    },
+    "correct_answer": "D",
+    "explanation": "There are exactly 1 bounding boxes drawn, indicating the annotated lesions.",
+    "metadata": {
+      "disease_label": "CSC",
+      "rendered_image_path": "./data/generated_qa/images/OCT_SCAN_008_T06.png",
+      "dataset_source": "OIMHS",
+      "original_image_path": "./data/raw/images/OCT_SCAN_008.png"
+    }
+  },
+  {
+    "question_id": "Q_OCT_SCAN_008_T09",
+    "task_id": "T09",
+    "image_id": "OCT_SCAN_008",
+    "question": "Which anatomical region is highlighted in red in this OCT image?",
+    "options": {
+      "A": "Vitreous cavity",
+      "B": "Cornea",
+      "C": "Choroid layer",
+      "D": "Retina"
+    },
+    "correct_answer": "D",
+    "explanation": "The highlighted red area covers the neural retinal band bounded by the ILM above and the RPE line below.",
+    "metadata": {
+      "disease_label": "CSC",
+      "rendered_image_path": "./data/generated_qa/images/OCT_SCAN_008_T09.png",
+      "dataset_source": "OIMHS",
+      "original_image_path": "./data/raw/images/OCT_SCAN_008.png"
+    }
+  },
+  {
+    "question_id": "Q_OCT_SCAN_008_T17",
+    "task_id": "T17",
+    "image_id": "OCT_SCAN_008",
+    "question": "Based on the structural changes observed in this OCT scan, what is the most likely clinical diagnosis?",
+    "options": {
+      "A": "Healthy Retina",
+      "B": "Diabetic Macular Edema (DME)",
+      "C": "Central Serous Chorioretinopathy (CSC)",
+      "D": "Macular pathology (CSC)"
+    },
+    "correct_answer": "D",
+    "explanation": "The presence of structural anomalies and liquid accumulation matches criteria for CSC.",
+    "metadata": {
+      "disease_label": "CSC",
+      "rendered_image_path": "./data/generated_qa/images/OCT_SCAN_008_T17.png",
+      "dataset_source": "OIMHS",
+      "original_image_path": "./data/raw/images/OCT_SCAN_008.png"
+    }
+  },
+  {
+    "question_id": "Q_OCT_SCAN_009_T01",
+    "task_id": "T01",
+    "image_id": "OCT_SCAN_009",
+    "question": "What medical imaging modality is demonstrated in the provided scan?",
+    "options": {
+      "A": "MRI Scan",
+      "B": "Ultrasound",
+      "C": "CT Scan",
+      "D": "Optical Coherence Tomography (OCT)"
+    },
+    "correct_answer": "D",
+    "explanation": "The image presents high-resolution cross-sectional retinal layer bands, which is characteristic of an Optical Coherence Tomography (OCT) scan.",
+    "metadata": {
+      "disease_label": "MH",
+      "rendered_image_path": "./data/generated_qa/images/OCT_SCAN_009_T01.png",
+      "dataset_source": "OCTDL",
+      "original_image_path": "./data/raw/images/OCT_SCAN_009.png"
+    }
+  },
+  {
+    "question_id": "Q_OCT_SCAN_009_T06",
+    "task_id": "T06",
+    "image_id": "OCT_SCAN_009",
+    "question": "How many distinct pathological features are highlighted with annotation boxes in this OCT image?",
+    "options": {
+      "A": "0",
+      "B": "3",
+      "C": "2",
+      "D": "1"
+    },
+    "correct_answer": "D",
+    "explanation": "There are exactly 1 bounding boxes drawn, indicating the annotated lesions.",
+    "metadata": {
+      "disease_label": "MH",
+      "rendered_image_path": "./data/generated_qa/images/OCT_SCAN_009_T06.png",
+      "dataset_source": "OCTDL",
+      "original_image_path": "./data/raw/images/OCT_SCAN_009.png"
+    }
+  },
+  {
+    "question_id": "Q_OCT_SCAN_009_T09",
+    "task_id": "T09",
+    "image_id": "OCT_SCAN_009",
+    "question": "Which anatomical region is highlighted in red in this OCT image?",
+    "options": {
+      "A": "Vitreous cavity",
+      "B": "Cornea",
+      "C": "Choroid layer",
+      "D": "Retina"
+    },
+    "correct_answer": "D",
+    "explanation": "The highlighted red area covers the neural retinal band bounded by the ILM above and the RPE line below.",
+    "metadata": {
+      "disease_label": "MH",
+      "rendered_image_path": "./data/generated_qa/images/OCT_SCAN_009_T09.png",
+      "dataset_source": "OCTDL",
+      "original_image_path": "./data/raw/images/OCT_SCAN_009.png"
+    }
+  },
+  {
+    "question_id": "Q_OCT_SCAN_009_T12",
+    "task_id": "T12",
+    "image_id": "OCT_SCAN_009",
+    "question": "What type of retinal lesion is outlined by the bounding box in this image?",
+    "options": {
+      "A": "Intraretinal Fluid (IRF)",
+      "B": "Subretinal Fluid (SRF)",
+      "C": "Subretinal Hyperreflective Material (SHRM)",
+      "D": "MH"
+    },
+    "correct_answer": "D",
+    "explanation": "The lesion displays characteristic features matching MH based on boundary separation and reflectivity.",
+    "metadata": {
+      "disease_label": "MH",
+      "rendered_image_path": "./data/generated_qa/images/OCT_SCAN_009_T12.png",
+      "dataset_source": "OCTDL",
+      "original_image_path": "./data/raw/images/OCT_SCAN_009.png"
+    }
+  },
+  {
+    "question_id": "Q_OCT_SCAN_009_T17",
+    "task_id": "T17",
+    "image_id": "OCT_SCAN_009",
+    "question": "Based on the structural changes observed in this OCT scan, what is the most likely clinical diagnosis?",
+    "options": {
+      "A": "Healthy Retina",
+      "B": "Diabetic Macular Edema (DME)",
+      "C": "Central Serous Chorioretinopathy (CSC)",
+      "D": "Macular pathology (MH)"
+    },
+    "correct_answer": "D",
+    "explanation": "The presence of structural anomalies and liquid accumulation matches criteria for MH.",
+    "metadata": {
+      "disease_label": "MH",
+      "rendered_image_path": "./data/generated_qa/images/OCT_SCAN_009_T17.png",
+      "dataset_source": "OCTDL",
+      "original_image_path": "./data/raw/images/OCT_SCAN_009.png"
+    }
+  },
+  {
+    "question_id": "Q_OCT_SCAN_010_T01",
+    "task_id": "T01",
+    "image_id": "OCT_SCAN_010",
+    "question": "What medical imaging modality is demonstrated in the provided scan?",
+    "options": {
+      "A": "MRI Scan",
+      "B": "Ultrasound",
+      "C": "CT Scan",
+      "D": "Optical Coherence Tomography (OCT)"
+    },
+    "correct_answer": "D",
+    "explanation": "The image presents high-resolution cross-sectional retinal layer bands, which is characteristic of an Optical Coherence Tomography (OCT) scan.",
+    "metadata": {
+      "disease_label": "MH",
+      "rendered_image_path": "./data/generated_qa/images/OCT_SCAN_010_T01.png",
+      "dataset_source": "AMD-SD",
+      "original_image_path": "./data/raw/images/OCT_SCAN_010.png"
+    }
+  },
+  {
+    "question_id": "Q_OCT_SCAN_010_T06",
+    "task_id": "T06",
+    "image_id": "OCT_SCAN_010",
+    "question": "How many distinct pathological features are highlighted with annotation boxes in this OCT image?",
+    "options": {
+      "A": "0",
+      "B": "3",
+      "C": "2",
+      "D": "1"
+    },
+    "correct_answer": "D",
+    "explanation": "There are exactly 1 bounding boxes drawn, indicating the annotated lesions.",
+    "metadata": {
+      "disease_label": "MH",
+      "rendered_image_path": "./data/generated_qa/images/OCT_SCAN_010_T06.png",
+      "dataset_source": "AMD-SD",
+      "original_image_path": "./data/raw/images/OCT_SCAN_010.png"
+    }
+  },
+  {
+    "question_id": "Q_OCT_SCAN_010_T09",
+    "task_id": "T09",
+    "image_id": "OCT_SCAN_010",
+    "question": "Which anatomical region is highlighted in red in this OCT image?",
+    "options": {
+      "A": "Vitreous cavity",
+      "B": "Cornea",
+      "C": "Choroid layer",
+      "D": "Retina"
+    },
+    "correct_answer": "D",
+    "explanation": "The highlighted red area covers the neural retinal band bounded by the ILM above and the RPE line below.",
+    "metadata": {
+      "disease_label": "MH",
+      "rendered_image_path": "./data/generated_qa/images/OCT_SCAN_010_T09.png",
+      "dataset_source": "AMD-SD",
+      "original_image_path": "./data/raw/images/OCT_SCAN_010.png"
+    }
+  },
+  {
+    "question_id": "Q_OCT_SCAN_010_T12",
+    "task_id": "T12",
+    "image_id": "OCT_SCAN_010",
+    "question": "What type of retinal lesion is outlined by the bounding box in this image?",
+    "options": {
+      "A": "Intraretinal Fluid (IRF)",
+      "B": "Subretinal Fluid (SRF)",
+      "C": "Subretinal Hyperreflective Material (SHRM)",
+      "D": "MH"
+    },
+    "correct_answer": "D",
+    "explanation": "The lesion displays characteristic features matching MH based on boundary separation and reflectivity.",
+    "metadata": {
+      "disease_label": "MH",
+      "rendered_image_path": "./data/generated_qa/images/OCT_SCAN_010_T12.png",
+      "dataset_source": "AMD-SD",
+      "original_image_path": "./data/raw/images/OCT_SCAN_010.png"
+    }
+  },
+  {
+    "question_id": "Q_OCT_SCAN_010_T17",
+    "task_id": "T17",
+    "image_id": "OCT_SCAN_010",
+    "question": "Based on the structural changes observed in this OCT scan, what is the most likely clinical diagnosis?",
+    "options": {
+      "A": "Healthy Retina",
+      "B": "Diabetic Macular Edema (DME)",
+      "C": "Central Serous Chorioretinopathy (CSC)",
+      "D": "Macular pathology (MH)"
+    },
+    "correct_answer": "D",
+    "explanation": "The presence of structural anomalies and liquid accumulation matches criteria for MH.",
+    "metadata": {
+      "disease_label": "MH",
+      "rendered_image_path": "./data/generated_qa/images/OCT_SCAN_010_T17.png",
+      "dataset_source": "AMD-SD",
+      "original_image_path": "./data/raw/images/OCT_SCAN_010.png"
+    }
+  },
+  {
+    "question_id": "Q_OCT_SCAN_011_T01",
+    "task_id": "T01",
+    "image_id": "OCT_SCAN_011",
+    "question": "What medical imaging modality is demonstrated in the provided scan?",
+    "options": {
+      "A": "MRI Scan",
+      "B": "Ultrasound",
+      "C": "CT Scan",
+      "D": "Optical Coherence Tomography (OCT)"
+    },
+    "correct_answer": "D",
+    "explanation": "The image presents high-resolution cross-sectional retinal layer bands, which is characteristic of an Optical Coherence Tomography (OCT) scan.",
+    "metadata": {
+      "disease_label": "MH",
+      "rendered_image_path": "./data/generated_qa/images/OCT_SCAN_011_T01.png",
+      "dataset_source": "OCTDL",
+      "original_image_path": "./data/raw/images/OCT_SCAN_011.png"
+    }
+  },
+  {
+    "question_id": "Q_OCT_SCAN_011_T06",
+    "task_id": "T06",
+    "image_id": "OCT_SCAN_011",
+    "question": "How many distinct pathological features are highlighted with annotation boxes in this OCT image?",
+    "options": {
+      "A": "0",
+      "B": "3",
+      "C": "2",
+      "D": "1"
+    },
+    "correct_answer": "D",
+    "explanation": "There are exactly 1 bounding boxes drawn, indicating the annotated lesions.",
+    "metadata": {
+      "disease_label": "MH",
+      "rendered_image_path": "./data/generated_qa/images/OCT_SCAN_011_T06.png",
+      "dataset_source": "OCTDL",
+      "original_image_path": "./data/raw/images/OCT_SCAN_011.png"
+    }
+  },
+  {
+    "question_id": "Q_OCT_SCAN_011_T09",
+    "task_id": "T09",
+    "image_id": "OCT_SCAN_011",
+    "question": "Which anatomical region is highlighted in red in this OCT image?",
+    "options": {
+      "A": "Vitreous cavity",
+      "B": "Cornea",
+      "C": "Choroid layer",
+      "D": "Retina"
+    },
+    "correct_answer": "D",
+    "explanation": "The highlighted red area covers the neural retinal band bounded by the ILM above and the RPE line below.",
+    "metadata": {
+      "disease_label": "MH",
+      "rendered_image_path": "./data/generated_qa/images/OCT_SCAN_011_T09.png",
+      "dataset_source": "OCTDL",
+      "original_image_path": "./data/raw/images/OCT_SCAN_011.png"
+    }
+  },
+  {
+    "question_id": "Q_OCT_SCAN_011_T12",
+    "task_id": "T12",
+    "image_id": "OCT_SCAN_011",
+    "question": "What type of retinal lesion is outlined by the bounding box in this image?",
+    "options": {
+      "A": "Intraretinal Fluid (IRF)",
+      "B": "Subretinal Fluid (SRF)",
+      "C": "Subretinal Hyperreflective Material (SHRM)",
+      "D": "MH"
+    },
+    "correct_answer": "D",
+    "explanation": "The lesion displays characteristic features matching MH based on boundary separation and reflectivity.",
+    "metadata": {
+      "disease_label": "MH",
+      "rendered_image_path": "./data/generated_qa/images/OCT_SCAN_011_T12.png",
+      "dataset_source": "OCTDL",
+      "original_image_path": "./data/raw/images/OCT_SCAN_011.png"
+    }
+  },
+  {
+    "question_id": "Q_OCT_SCAN_011_T17",
+    "task_id": "T17",
+    "image_id": "OCT_SCAN_011",
+    "question": "Based on the structural changes observed in this OCT scan, what is the most likely clinical diagnosis?",
+    "options": {
+      "A": "Healthy Retina",
+      "B": "Diabetic Macular Edema (DME)",
+      "C": "Central Serous Chorioretinopathy (CSC)",
+      "D": "Macular pathology (MH)"
+    },
+    "correct_answer": "D",
+    "explanation": "The presence of structural anomalies and liquid accumulation matches criteria for MH.",
+    "metadata": {
+      "disease_label": "MH",
+      "rendered_image_path": "./data/generated_qa/images/OCT_SCAN_011_T17.png",
+      "dataset_source": "OCTDL",
+      "original_image_path": "./data/raw/images/OCT_SCAN_011.png"
+    }
+  },
+  {
+    "question_id": "Q_OCT_SCAN_012_T01",
+    "task_id": "T01",
+    "image_id": "OCT_SCAN_012",
+    "question": "What medical imaging modality is demonstrated in the provided scan?",
+    "options": {
+      "A": "MRI Scan",
+      "B": "Ultrasound",
+      "C": "CT Scan",
+      "D": "Optical Coherence Tomography (OCT)"
+    },
+    "correct_answer": "D",
+    "explanation": "The image presents high-resolution cross-sectional retinal layer bands, which is characteristic of an Optical Coherence Tomography (OCT) scan.",
+    "metadata": {
+      "disease_label": "NORMAL",
+      "rendered_image_path": "./data/generated_qa/images/OCT_SCAN_012_T01.png",
+      "dataset_source": "OCTDL",
+      "original_image_path": "./data/raw/images/OCT_SCAN_012.png"
+    }
+  },
+  {
+    "question_id": "Q_OCT_SCAN_012_T06",
+    "task_id": "T06",
+    "image_id": "OCT_SCAN_012",
+    "question": "How many distinct pathological features are highlighted with annotation boxes in this OCT image?",
+    "options": {
+      "A": "0",
+      "B": "2",
+      "C": "1",
+      "D": "0"
+    },
+    "correct_answer": "D",
+    "explanation": "There are exactly 0 bounding boxes drawn, indicating the annotated lesions.",
+    "metadata": {
+      "disease_label": "NORMAL",
+      "rendered_image_path": "./data/generated_qa/images/OCT_SCAN_012_T06.png",
+      "dataset_source": "OCTDL",
+      "original_image_path": "./data/raw/images/OCT_SCAN_012.png"
+    }
+  },
+  {
+    "question_id": "Q_OCT_SCAN_012_T09",
+    "task_id": "T09",
+    "image_id": "OCT_SCAN_012",
+    "question": "Which anatomical region is highlighted in red in this OCT image?",
+    "options": {
+      "A": "Vitreous cavity",
+      "B": "Cornea",
+      "C": "Choroid layer",
+      "D": "Retina"
+    },
+    "correct_answer": "D",
+    "explanation": "The highlighted red area covers the neural retinal band bounded by the ILM above and the RPE line below.",
+    "metadata": {
+      "disease_label": "NORMAL",
+      "rendered_image_path": "./data/generated_qa/images/OCT_SCAN_012_T09.png",
+      "dataset_source": "OCTDL",
+      "original_image_path": "./data/raw/images/OCT_SCAN_012.png"
+    }
+  },
+  {
+    "question_id": "Q_OCT_SCAN_012_T12",
+    "task_id": "T12",
+    "image_id": "OCT_SCAN_012",
+    "question": "What type of retinal lesion is outlined by the bounding box in this image?",
+    "options": {
+      "A": "Intraretinal Fluid (IRF)",
+      "B": "Subretinal Fluid (SRF)",
+      "C": "Subretinal Hyperreflective Material (SHRM)",
+      "D": "NORMAL"
+    },
+    "correct_answer": "D",
+    "explanation": "The lesion displays characteristic features matching NORMAL based on boundary separation and reflectivity.",
+    "metadata": {
+      "disease_label": "NORMAL",
+      "rendered_image_path": "./data/generated_qa/images/OCT_SCAN_012_T12.png",
+      "dataset_source": "OCTDL",
+      "original_image_path": "./data/raw/images/OCT_SCAN_012.png"
+    }
+  },
+  {
+    "question_id": "Q_OCT_SCAN_012_T17",
+    "task_id": "T17",
+    "image_id": "OCT_SCAN_012",
+    "question": "Based on the structural changes observed in this OCT scan, what is the most likely clinical diagnosis?",
+    "options": {
+      "A": "Healthy Retina",
+      "B": "Diabetic Macular Edema (DME)",
+      "C": "Central Serous Chorioretinopathy (CSC)",
+      "D": "Macular pathology (NORMAL)"
+    },
+    "correct_answer": "D",
+    "explanation": "The presence of structural anomalies and liquid accumulation matches criteria for NORMAL.",
+    "metadata": {
+      "disease_label": "NORMAL",
+      "rendered_image_path": "./data/generated_qa/images/OCT_SCAN_012_T17.png",
+      "dataset_source": "OCTDL",
+      "original_image_path": "./data/raw/images/OCT_SCAN_012.png"
+    }
+  },
+  {
+    "question_id": "Q_OCT_SCAN_013_T01",
+    "task_id": "T01",
+    "image_id": "OCT_SCAN_013",
+    "question": "What medical imaging modality is demonstrated in the provided scan?",
+    "options": {
+      "A": "MRI Scan",
+      "B": "Ultrasound",
+      "C": "CT Scan",
+      "D": "Optical Coherence Tomography (OCT)"
+    },
+    "correct_answer": "D",
+    "explanation": "The image presents high-resolution cross-sectional retinal layer bands, which is characteristic of an Optical Coherence Tomography (OCT) scan.",
+    "metadata": {
+      "disease_label": "AMD",
+      "rendered_image_path": "./data/generated_qa/images/OCT_SCAN_013_T01.png",
+      "dataset_source": "OCTDL",
+      "original_image_path": "./data/raw/images/OCT_SCAN_013.png"
+    }
+  },
+  {
+    "question_id": "Q_OCT_SCAN_013_T06",
+    "task_id": "T06",
+    "image_id": "OCT_SCAN_013",
+    "question": "How many distinct pathological features are highlighted with annotation boxes in this OCT image?",
+    "options": {
+      "A": "0",
+      "B": "3",
+      "C": "2",
+      "D": "1"
+    },
+    "correct_answer": "D",
+    "explanation": "There are exactly 1 bounding boxes drawn, indicating the annotated lesions.",
+    "metadata": {
+      "disease_label": "AMD",
+      "rendered_image_path": "./data/generated_qa/images/OCT_SCAN_013_T06.png",
+      "dataset_source": "OCTDL",
+      "original_image_path": "./data/raw/images/OCT_SCAN_013.png"
+    }
+  },
+  {
+    "question_id": "Q_OCT_SCAN_013_T09",
+    "task_id": "T09",
+    "image_id": "OCT_SCAN_013",
+    "question": "Which anatomical region is highlighted in red in this OCT image?",
+    "options": {
+      "A": "Vitreous cavity",
+      "B": "Cornea",
+      "C": "Choroid layer",
+      "D": "Retina"
+    },
+    "correct_answer": "D",
+    "explanation": "The highlighted red area covers the neural retinal band bounded by the ILM above and the RPE line below.",
+    "metadata": {
+      "disease_label": "AMD",
+      "rendered_image_path": "./data/generated_qa/images/OCT_SCAN_013_T09.png",
+      "dataset_source": "OCTDL",
+      "original_image_path": "./data/raw/images/OCT_SCAN_013.png"
+    }
+  },
+  {
+    "question_id": "Q_OCT_SCAN_013_T12",
+    "task_id": "T12",
+    "image_id": "OCT_SCAN_013",
+    "question": "What type of retinal lesion is outlined by the bounding box in this image?",
+    "options": {
+      "A": "Intraretinal Fluid (IRF)",
+      "B": "Subretinal Fluid (SRF)",
+      "C": "Subretinal Hyperreflective Material (SHRM)",
+      "D": "Pigment Epithelial Detachment (PED)"
+    },
+    "correct_answer": "D",
+    "explanation": "The lesion displays characteristic features matching PED based on boundary separation and reflectivity.",
+    "metadata": {
+      "disease_label": "AMD",
+      "rendered_image_path": "./data/generated_qa/images/OCT_SCAN_013_T12.png",
+      "dataset_source": "OCTDL",
+      "original_image_path": "./data/raw/images/OCT_SCAN_013.png"
+    }
+  },
+  {
+    "question_id": "Q_OCT_SCAN_013_T17",
+    "task_id": "T17",
+    "image_id": "OCT_SCAN_013",
+    "question": "Based on the structural changes observed in this OCT scan, what is the most likely clinical diagnosis?",
+    "options": {
+      "A": "Healthy Retina",
+      "B": "Diabetic Macular Edema (DME)",
+      "C": "Central Serous Chorioretinopathy (CSC)",
+      "D": "Macular pathology (AMD)"
+    },
+    "correct_answer": "D",
+    "explanation": "The presence of structural anomalies and liquid accumulation matches criteria for AMD.",
+    "metadata": {
+      "disease_label": "AMD",
+      "rendered_image_path": "./data/generated_qa/images/OCT_SCAN_013_T17.png",
+      "dataset_source": "OCTDL",
+      "original_image_path": "./data/raw/images/OCT_SCAN_013.png"
+    }
+  },
+  {
+    "question_id": "Q_OCT_SCAN_014_T01",
+    "task_id": "T01",
+    "image_id": "OCT_SCAN_014",
+    "question": "What medical imaging modality is demonstrated in the provided scan?",
+    "options": {
+      "A": "MRI Scan",
+      "B": "Ultrasound",
+      "C": "CT Scan",
+      "D": "Optical Coherence Tomography (OCT)"
+    },
+    "correct_answer": "D",
+    "explanation": "The image presents high-resolution cross-sectional retinal layer bands, which is characteristic of an Optical Coherence Tomography (OCT) scan.",
+    "metadata": {
+      "disease_label": "NORMAL",
+      "rendered_image_path": "./data/generated_qa/images/OCT_SCAN_014_T01.png",
+      "dataset_source": "AMD-SD",
+      "original_image_path": "./data/raw/images/OCT_SCAN_014.png"
+    }
+  },
+  {
+    "question_id": "Q_OCT_SCAN_014_T06",
+    "task_id": "T06",
+    "image_id": "OCT_SCAN_014",
+    "question": "How many distinct pathological features are highlighted with annotation boxes in this OCT image?",
+    "options": {
+      "A": "0",
+      "B": "2",
+      "C": "1",
+      "D": "0"
+    },
+    "correct_answer": "D",
+    "explanation": "There are exactly 0 bounding boxes drawn, indicating the annotated lesions.",
+    "metadata": {
+      "disease_label": "NORMAL",
+      "rendered_image_path": "./data/generated_qa/images/OCT_SCAN_014_T06.png",
+      "dataset_source": "AMD-SD",
+      "original_image_path": "./data/raw/images/OCT_SCAN_014.png"
+    }
+  },
+  {
+    "question_id": "Q_OCT_SCAN_014_T09",
+    "task_id": "T09",
+    "image_id": "OCT_SCAN_014",
+    "question": "Which anatomical region is highlighted in red in this OCT image?",
+    "options": {
+      "A": "Vitreous cavity",
+      "B": "Cornea",
+      "C": "Choroid layer",
+      "D": "Retina"
+    },
+    "correct_answer": "D",
+    "explanation": "The highlighted red area covers the neural retinal band bounded by the ILM above and the RPE line below.",
+    "metadata": {
+      "disease_label": "NORMAL",
+      "rendered_image_path": "./data/generated_qa/images/OCT_SCAN_014_T09.png",
+      "dataset_source": "AMD-SD",
+      "original_image_path": "./data/raw/images/OCT_SCAN_014.png"
+    }
+  },
+  {
+    "question_id": "Q_OCT_SCAN_014_T12",
+    "task_id": "T12",
+    "image_id": "OCT_SCAN_014",
+    "question": "What type of retinal lesion is outlined by the bounding box in this image?",
+    "options": {
+      "A": "Intraretinal Fluid (IRF)",
+      "B": "Subretinal Fluid (SRF)",
+      "C": "Subretinal Hyperreflective Material (SHRM)",
+      "D": "NORMAL"
+    },
+    "correct_answer": "D",
+    "explanation": "The lesion displays characteristic features matching NORMAL based on boundary separation and reflectivity.",
+    "metadata": {
+      "disease_label": "NORMAL",
+      "rendered_image_path": "./data/generated_qa/images/OCT_SCAN_014_T12.png",
+      "dataset_source": "AMD-SD",
+      "original_image_path": "./data/raw/images/OCT_SCAN_014.png"
+    }
+  },
+  {
+    "question_id": "Q_OCT_SCAN_014_T17",
+    "task_id": "T17",
+    "image_id": "OCT_SCAN_014",
+    "question": "Based on the structural changes observed in this OCT scan, what is the most likely clinical diagnosis?",
+    "options": {
+      "A": "Healthy Retina",
+      "B": "Diabetic Macular Edema (DME)",
+      "C": "Central Serous Chorioretinopathy (CSC)",
+      "D": "Macular pathology (NORMAL)"
+    },
+    "correct_answer": "D",
+    "explanation": "The presence of structural anomalies and liquid accumulation matches criteria for NORMAL.",
+    "metadata": {
+      "disease_label": "NORMAL",
+      "rendered_image_path": "./data/generated_qa/images/OCT_SCAN_014_T17.png",
+      "dataset_source": "AMD-SD",
+      "original_image_path": "./data/raw/images/OCT_SCAN_014.png"
+    }
+  },
+  {
+    "question_id": "Q_OCT_SCAN_015_T01",
+    "task_id": "T01",
+    "image_id": "OCT_SCAN_015",
+    "question": "What medical imaging modality is demonstrated in the provided scan?",
+    "options": {
+      "A": "MRI Scan",
+      "B": "Ultrasound",
+      "C": "CT Scan",
+      "D": "Optical Coherence Tomography (OCT)"
+    },
+    "correct_answer": "D",
+    "explanation": "The image presents high-resolution cross-sectional retinal layer bands, which is characteristic of an Optical Coherence Tomography (OCT) scan.",
+    "metadata": {
+      "disease_label": "DME",
+      "rendered_image_path": "./data/generated_qa/images/OCT_SCAN_015_T01.png",
+      "dataset_source": "AMD-SD",
+      "original_image_path": "./data/raw/images/OCT_SCAN_015.png"
+    }
+  },
+  {
+    "question_id": "Q_OCT_SCAN_015_T06",
+    "task_id": "T06",
+    "image_id": "OCT_SCAN_015",
+    "question": "How many distinct pathological features are highlighted with annotation boxes in this OCT image?",
+    "options": {
+      "A": "1",
+      "B": "5",
+      "C": "4",
+      "D": "3"
+    },
+    "correct_answer": "D",
+    "explanation": "There are exactly 3 bounding boxes drawn, indicating the annotated lesions.",
+    "metadata": {
+      "disease_label": "DME",
+      "rendered_image_path": "./data/generated_qa/images/OCT_SCAN_015_T06.png",
+      "dataset_source": "AMD-SD",
+      "original_image_path": "./data/raw/images/OCT_SCAN_015.png"
+    }
+  },
+  {
+    "question_id": "Q_OCT_SCAN_015_T09",
+    "task_id": "T09",
+    "image_id": "OCT_SCAN_015",
+    "question": "Which anatomical region is highlighted in red in this OCT image?",
+    "options": {
+      "A": "Vitreous cavity",
+      "B": "Cornea",
+      "C": "Choroid layer",
+      "D": "Retina"
+    },
+    "correct_answer": "D",
+    "explanation": "The highlighted red area covers the neural retinal band bounded by the ILM above and the RPE line below.",
+    "metadata": {
+      "disease_label": "DME",
+      "rendered_image_path": "./data/generated_qa/images/OCT_SCAN_015_T09.png",
+      "dataset_source": "AMD-SD",
+      "original_image_path": "./data/raw/images/OCT_SCAN_015.png"
+    }
+  },
+  {
+    "question_id": "Q_OCT_SCAN_015_T12",
+    "task_id": "T12",
+    "image_id": "OCT_SCAN_015",
+    "question": "What type of retinal lesion is outlined by the bounding box in this image?",
+    "options": {
+      "A": "Intraretinal Fluid (IRF)",
+      "B": "Subretinal Fluid (SRF)",
+      "C": "Subretinal Hyperreflective Material (SHRM)",
+      "D": "IRF"
+    },
+    "correct_answer": "D",
+    "explanation": "The lesion displays characteristic features matching IRF based on boundary separation and reflectivity.",
+    "metadata": {
+      "disease_label": "DME",
+      "rendered_image_path": "./data/generated_qa/images/OCT_SCAN_015_T12.png",
+      "dataset_source": "AMD-SD",
+      "original_image_path": "./data/raw/images/OCT_SCAN_015.png"
+    }
+  },
+  {
+    "question_id": "Q_OCT_SCAN_015_T17",
+    "task_id": "T17",
+    "image_id": "OCT_SCAN_015",
+    "question": "Based on the structural changes observed in this OCT scan, what is the most likely clinical diagnosis?",
+    "options": {
+      "A": "Healthy Retina",
+      "B": "Diabetic Macular Edema (DME)",
+      "C": "Central Serous Chorioretinopathy (CSC)",
+      "D": "Macular pathology (DME)"
+    },
+    "correct_answer": "D",
+    "explanation": "The presence of structural anomalies and liquid accumulation matches criteria for DME.",
+    "metadata": {
+      "disease_label": "DME",
+      "rendered_image_path": "./data/generated_qa/images/OCT_SCAN_015_T17.png",
+      "dataset_source": "AMD-SD",
+      "original_image_path": "./data/raw/images/OCT_SCAN_015.png"
+    }
+  },
+  {
+    "question_id": "Q_OCT_SCAN_016_T01",
+    "task_id": "T01",
+    "image_id": "OCT_SCAN_016",
+    "question": "What medical imaging modality is demonstrated in the provided scan?",
+    "options": {
+      "A": "MRI Scan",
+      "B": "Ultrasound",
+      "C": "CT Scan",
+      "D": "Optical Coherence Tomography (OCT)"
+    },
+    "correct_answer": "D",
+    "explanation": "The image presents high-resolution cross-sectional retinal layer bands, which is characteristic of an Optical Coherence Tomography (OCT) scan.",
+    "metadata": {
+      "disease_label": "DME",
+      "rendered_image_path": "./data/generated_qa/images/OCT_SCAN_016_T01.png",
+      "dataset_source": "OCT5k",
+      "original_image_path": "./data/raw/images/OCT_SCAN_016.png"
+    }
+  },
+  {
+    "question_id": "Q_OCT_SCAN_016_T06",
+    "task_id": "T06",
+    "image_id": "OCT_SCAN_016",
+    "question": "How many distinct pathological features are highlighted with annotation boxes in this OCT image?",
+    "options": {
+      "A": "1",
+      "B": "5",
+      "C": "4",
+      "D": "3"
+    },
+    "correct_answer": "D",
+    "explanation": "There are exactly 3 bounding boxes drawn, indicating the annotated lesions.",
+    "metadata": {
+      "disease_label": "DME",
+      "rendered_image_path": "./data/generated_qa/images/OCT_SCAN_016_T06.png",
+      "dataset_source": "OCT5k",
+      "original_image_path": "./data/raw/images/OCT_SCAN_016.png"
+    }
+  },
+  {
+    "question_id": "Q_OCT_SCAN_016_T09",
+    "task_id": "T09",
+    "image_id": "OCT_SCAN_016",
+    "question": "Which anatomical region is highlighted in red in this OCT image?",
+    "options": {
+      "A": "Vitreous cavity",
+      "B": "Cornea",
+      "C": "Choroid layer",
+      "D": "Retina"
+    },
+    "correct_answer": "D",
+    "explanation": "The highlighted red area covers the neural retinal band bounded by the ILM above and the RPE line below.",
+    "metadata": {
+      "disease_label": "DME",
+      "rendered_image_path": "./data/generated_qa/images/OCT_SCAN_016_T09.png",
+      "dataset_source": "OCT5k",
+      "original_image_path": "./data/raw/images/OCT_SCAN_016.png"
+    }
+  },
+  {
+    "question_id": "Q_OCT_SCAN_016_T12",
+    "task_id": "T12",
+    "image_id": "OCT_SCAN_016",
+    "question": "What type of retinal lesion is outlined by the bounding box in this image?",
+    "options": {
+      "A": "Intraretinal Fluid (IRF)",
+      "B": "Subretinal Fluid (SRF)",
+      "C": "Subretinal Hyperreflective Material (SHRM)",
+      "D": "IRF"
+    },
+    "correct_answer": "D",
+    "explanation": "The lesion displays characteristic features matching IRF based on boundary separation and reflectivity.",
+    "metadata": {
+      "disease_label": "DME",
+      "rendered_image_path": "./data/generated_qa/images/OCT_SCAN_016_T12.png",
+      "dataset_source": "OCT5k",
+      "original_image_path": "./data/raw/images/OCT_SCAN_016.png"
+    }
+  },
+  {
+    "question_id": "Q_OCT_SCAN_016_T17",
+    "task_id": "T17",
+    "image_id": "OCT_SCAN_016",
+    "question": "Based on the structural changes observed in this OCT scan, what is the most likely clinical diagnosis?",
+    "options": {
+      "A": "Healthy Retina",
+      "B": "Diabetic Macular Edema (DME)",
+      "C": "Central Serous Chorioretinopathy (CSC)",
+      "D": "Macular pathology (DME)"
+    },
+    "correct_answer": "D",
+    "explanation": "The presence of structural anomalies and liquid accumulation matches criteria for DME.",
+    "metadata": {
+      "disease_label": "DME",
+      "rendered_image_path": "./data/generated_qa/images/OCT_SCAN_016_T17.png",
+      "dataset_source": "OCT5k",
+      "original_image_path": "./data/raw/images/OCT_SCAN_016.png"
+    }
+  },
+  {
+    "question_id": "Q_OCT_SCAN_017_T01",
+    "task_id": "T01",
+    "image_id": "OCT_SCAN_017",
+    "question": "What medical imaging modality is demonstrated in the provided scan?",
+    "options": {
+      "A": "MRI Scan",
+      "B": "Ultrasound",
+      "C": "CT Scan",
+      "D": "Optical Coherence Tomography (OCT)"
+    },
+    "correct_answer": "D",
+    "explanation": "The image presents high-resolution cross-sectional retinal layer bands, which is characteristic of an Optical Coherence Tomography (OCT) scan.",
+    "metadata": {
+      "disease_label": "CSC",
+      "rendered_image_path": "./data/generated_qa/images/OCT_SCAN_017_T01.png",
+      "dataset_source": "OCT5k",
+      "original_image_path": "./data/raw/images/OCT_SCAN_017.png"
+    }
+  },
+  {
+    "question_id": "Q_OCT_SCAN_017_T06",
+    "task_id": "T06",
+    "image_id": "OCT_SCAN_017",
+    "question": "How many distinct pathological features are highlighted with annotation boxes in this OCT image?",
+    "options": {
+      "A": "0",
+      "B": "3",
+      "C": "2",
+      "D": "1"
+    },
+    "correct_answer": "D",
+    "explanation": "There are exactly 1 bounding boxes drawn, indicating the annotated lesions.",
+    "metadata": {
+      "disease_label": "CSC",
+      "rendered_image_path": "./data/generated_qa/images/OCT_SCAN_017_T06.png",
+      "dataset_source": "OCT5k",
+      "original_image_path": "./data/raw/images/OCT_SCAN_017.png"
+    }
+  },
+  {
+    "question_id": "Q_OCT_SCAN_017_T09",
+    "task_id": "T09",
+    "image_id": "OCT_SCAN_017",
+    "question": "Which anatomical region is highlighted in red in this OCT image?",
+    "options": {
+      "A": "Vitreous cavity",
+      "B": "Cornea",
+      "C": "Choroid layer",
+      "D": "Retina"
+    },
+    "correct_answer": "D",
+    "explanation": "The highlighted red area covers the neural retinal band bounded by the ILM above and the RPE line below.",
+    "metadata": {
+      "disease_label": "CSC",
+      "rendered_image_path": "./data/generated_qa/images/OCT_SCAN_017_T09.png",
+      "dataset_source": "OCT5k",
+      "original_image_path": "./data/raw/images/OCT_SCAN_017.png"
+    }
+  },
+  {
+    "question_id": "Q_OCT_SCAN_017_T12",
+    "task_id": "T12",
+    "image_id": "OCT_SCAN_017",
+    "question": "What type of retinal lesion is outlined by the bounding box in this image?",
+    "options": {
+      "A": "Intraretinal Fluid (IRF)",
+      "B": "Subretinal Fluid (SRF)",
+      "C": "Subretinal Hyperreflective Material (SHRM)",
+      "D": "SRF"
+    },
+    "correct_answer": "D",
+    "explanation": "The lesion displays characteristic features matching SRF based on boundary separation and reflectivity.",
+    "metadata": {
+      "disease_label": "CSC",
+      "rendered_image_path": "./data/generated_qa/images/OCT_SCAN_017_T12.png",
+      "dataset_source": "OCT5k",
+      "original_image_path": "./data/raw/images/OCT_SCAN_017.png"
+    }
+  },
+  {
+    "question_id": "Q_OCT_SCAN_017_T17",
+    "task_id": "T17",
+    "image_id": "OCT_SCAN_017",
+    "question": "Based on the structural changes observed in this OCT scan, what is the most likely clinical diagnosis?",
+    "options": {
+      "A": "Healthy Retina",
+      "B": "Diabetic Macular Edema (DME)",
+      "C": "Central Serous Chorioretinopathy (CSC)",
+      "D": "Macular pathology (CSC)"
+    },
+    "correct_answer": "D",
+    "explanation": "The presence of structural anomalies and liquid accumulation matches criteria for CSC.",
+    "metadata": {
+      "disease_label": "CSC",
+      "rendered_image_path": "./data/generated_qa/images/OCT_SCAN_017_T17.png",
+      "dataset_source": "OCT5k",
+      "original_image_path": "./data/raw/images/OCT_SCAN_017.png"
+    }
+  },
+  {
+    "question_id": "Q_OCT_SCAN_018_T01",
+    "task_id": "T01",
+    "image_id": "OCT_SCAN_018",
+    "question": "What medical imaging modality is demonstrated in the provided scan?",
+    "options": {
+      "A": "MRI Scan",
+      "B": "Ultrasound",
+      "C": "CT Scan",
+      "D": "Optical Coherence Tomography (OCT)"
+    },
+    "correct_answer": "D",
+    "explanation": "The image presents high-resolution cross-sectional retinal layer bands, which is characteristic of an Optical Coherence Tomography (OCT) scan.",
+    "metadata": {
+      "disease_label": "NORMAL",
+      "rendered_image_path": "./data/generated_qa/images/OCT_SCAN_018_T01.png",
+      "dataset_source": "AMD-SD",
+      "original_image_path": "./data/raw/images/OCT_SCAN_018.png"
+    }
+  },
+  {
+    "question_id": "Q_OCT_SCAN_018_T06",
+    "task_id": "T06",
+    "image_id": "OCT_SCAN_018",
+    "question": "How many distinct pathological features are highlighted with annotation boxes in this OCT image?",
+    "options": {
+      "A": "0",
+      "B": "2",
+      "C": "1",
+      "D": "0"
+    },
+    "correct_answer": "D",
+    "explanation": "There are exactly 0 bounding boxes drawn, indicating the annotated lesions.",
+    "metadata": {
+      "disease_label": "NORMAL",
+      "rendered_image_path": "./data/generated_qa/images/OCT_SCAN_018_T06.png",
+      "dataset_source": "AMD-SD",
+      "original_image_path": "./data/raw/images/OCT_SCAN_018.png"
+    }
+  },
+  {
+    "question_id": "Q_OCT_SCAN_018_T09",
+    "task_id": "T09",
+    "image_id": "OCT_SCAN_018",
+    "question": "Which anatomical region is highlighted in red in this OCT image?",
+    "options": {
+      "A": "Vitreous cavity",
+      "B": "Cornea",
+      "C": "Choroid layer",
+      "D": "Retina"
+    },
+    "correct_answer": "D",
+    "explanation": "The highlighted red area covers the neural retinal band bounded by the ILM above and the RPE line below.",
+    "metadata": {
+      "disease_label": "NORMAL",
+      "rendered_image_path": "./data/generated_qa/images/OCT_SCAN_018_T09.png",
+      "dataset_source": "AMD-SD",
+      "original_image_path": "./data/raw/images/OCT_SCAN_018.png"
+    }
+  },
+  {
+    "question_id": "Q_OCT_SCAN_018_T12",
+    "task_id": "T12",
+    "image_id": "OCT_SCAN_018",
+    "question": "What type of retinal lesion is outlined by the bounding box in this image?",
+    "options": {
+      "A": "Intraretinal Fluid (IRF)",
+      "B": "Subretinal Fluid (SRF)",
+      "C": "Subretinal Hyperreflective Material (SHRM)",
+      "D": "NORMAL"
+    },
+    "correct_answer": "D",
+    "explanation": "The lesion displays characteristic features matching NORMAL based on boundary separation and reflectivity.",
+    "metadata": {
+      "disease_label": "NORMAL",
+      "rendered_image_path": "./data/generated_qa/images/OCT_SCAN_018_T12.png",
+      "dataset_source": "AMD-SD",
+      "original_image_path": "./data/raw/images/OCT_SCAN_018.png"
+    }
+  },
+  {
+    "question_id": "Q_OCT_SCAN_018_T17",
+    "task_id": "T17",
+    "image_id": "OCT_SCAN_018",
+    "question": "Based on the structural changes observed in this OCT scan, what is the most likely clinical diagnosis?",
+    "options": {
+      "A": "Healthy Retina",
+      "B": "Diabetic Macular Edema (DME)",
+      "C": "Central Serous Chorioretinopathy (CSC)",
+      "D": "Macular pathology (NORMAL)"
+    },
+    "correct_answer": "D",
+    "explanation": "The presence of structural anomalies and liquid accumulation matches criteria for NORMAL.",
+    "metadata": {
+      "disease_label": "NORMAL",
+      "rendered_image_path": "./data/generated_qa/images/OCT_SCAN_018_T17.png",
+      "dataset_source": "AMD-SD",
+      "original_image_path": "./data/raw/images/OCT_SCAN_018.png"
+    }
+  },
+  {
+    "question_id": "Q_OCT_SCAN_019_T01",
+    "task_id": "T01",
+    "image_id": "OCT_SCAN_019",
+    "question": "What medical imaging modality is demonstrated in the provided scan?",
+    "options": {
+      "A": "MRI Scan",
+      "B": "Ultrasound",
+      "C": "CT Scan",
+      "D": "Optical Coherence Tomography (OCT)"
+    },
+    "correct_answer": "D",
+    "explanation": "The image presents high-resolution cross-sectional retinal layer bands, which is characteristic of an Optical Coherence Tomography (OCT) scan.",
+    "metadata": {
+      "disease_label": "AMD",
+      "rendered_image_path": "./data/generated_qa/images/OCT_SCAN_019_T01.png",
+      "dataset_source": "OCTDL",
+      "original_image_path": "./data/raw/images/OCT_SCAN_019.png"
+    }
+  },
+  {
+    "question_id": "Q_OCT_SCAN_019_T06",
+    "task_id": "T06",
+    "image_id": "OCT_SCAN_019",
+    "question": "How many distinct pathological features are highlighted with annotation boxes in this OCT image?",
+    "options": {
+      "A": "0",
+      "B": "3",
+      "C": "2",
+      "D": "1"
+    },
+    "correct_answer": "D",
+    "explanation": "There are exactly 1 bounding boxes drawn, indicating the annotated lesions.",
+    "metadata": {
+      "disease_label": "AMD",
+      "rendered_image_path": "./data/generated_qa/images/OCT_SCAN_019_T06.png",
+      "dataset_source": "OCTDL",
+      "original_image_path": "./data/raw/images/OCT_SCAN_019.png"
+    }
+  },
+  {
+    "question_id": "Q_OCT_SCAN_019_T09",
+    "task_id": "T09",
+    "image_id": "OCT_SCAN_019",
+    "question": "Which anatomical region is highlighted in red in this OCT image?",
+    "options": {
+      "A": "Vitreous cavity",
+      "B": "Cornea",
+      "C": "Choroid layer",
+      "D": "Retina"
+    },
+    "correct_answer": "D",
+    "explanation": "The highlighted red area covers the neural retinal band bounded by the ILM above and the RPE line below.",
+    "metadata": {
+      "disease_label": "AMD",
+      "rendered_image_path": "./data/generated_qa/images/OCT_SCAN_019_T09.png",
+      "dataset_source": "OCTDL",
+      "original_image_path": "./data/raw/images/OCT_SCAN_019.png"
+    }
+  },
+  {
+    "question_id": "Q_OCT_SCAN_019_T17",
+    "task_id": "T17",
+    "image_id": "OCT_SCAN_019",
+    "question": "Based on the structural changes observed in this OCT scan, what is the most likely clinical diagnosis?",
+    "options": {
+      "A": "Healthy Retina",
+      "B": "Diabetic Macular Edema (DME)",
+      "C": "Central Serous Chorioretinopathy (CSC)",
+      "D": "Macular pathology (AMD)"
+    },
+    "correct_answer": "D",
+    "explanation": "The presence of structural anomalies and liquid accumulation matches criteria for AMD.",
+    "metadata": {
+      "disease_label": "AMD",
+      "rendered_image_path": "./data/generated_qa/images/OCT_SCAN_019_T17.png",
+      "dataset_source": "OCTDL",
+      "original_image_path": "./data/raw/images/OCT_SCAN_019.png"
+    }
+  },
+  {
+    "question_id": "Q_OCT_SCAN_020_T01",
+    "task_id": "T01",
+    "image_id": "OCT_SCAN_020",
+    "question": "What medical imaging modality is demonstrated in the provided scan?",
+    "options": {
+      "A": "MRI Scan",
+      "B": "Ultrasound",
+      "C": "CT Scan",
+      "D": "Optical Coherence Tomography (OCT)"
+    },
+    "correct_answer": "D",
+    "explanation": "The image presents high-resolution cross-sectional retinal layer bands, which is characteristic of an Optical Coherence Tomography (OCT) scan.",
+    "metadata": {
+      "disease_label": "AMD",
+      "rendered_image_path": "./data/generated_qa/images/OCT_SCAN_020_T01.png",
+      "dataset_source": "AMD-SD",
+      "original_image_path": "./data/raw/images/OCT_SCAN_020.png"
+    }
+  },
+  {
+    "question_id": "Q_OCT_SCAN_020_T06",
+    "task_id": "T06",
+    "image_id": "OCT_SCAN_020",
+    "question": "How many distinct pathological features are highlighted with annotation boxes in this OCT image?",
+    "options": {
+      "A": "0",
+      "B": "3",
+      "C": "2",
+      "D": "1"
+    },
+    "correct_answer": "D",
+    "explanation": "There are exactly 1 bounding boxes drawn, indicating the annotated lesions.",
+    "metadata": {
+      "disease_label": "AMD",
+      "rendered_image_path": "./data/generated_qa/images/OCT_SCAN_020_T06.png",
+      "dataset_source": "AMD-SD",
+      "original_image_path": "./data/raw/images/OCT_SCAN_020.png"
+    }
+  },
+  {
+    "question_id": "Q_OCT_SCAN_020_T09",
+    "task_id": "T09",
+    "image_id": "OCT_SCAN_020",
+    "question": "Which anatomical region is highlighted in red in this OCT image?",
+    "options": {
+      "A": "Vitreous cavity",
+      "B": "Cornea",
+      "C": "Choroid layer",
+      "D": "Retina"
+    },
+    "correct_answer": "D",
+    "explanation": "The highlighted red area covers the neural retinal band bounded by the ILM above and the RPE line below.",
+    "metadata": {
+      "disease_label": "AMD",
+      "rendered_image_path": "./data/generated_qa/images/OCT_SCAN_020_T09.png",
+      "dataset_source": "AMD-SD",
+      "original_image_path": "./data/raw/images/OCT_SCAN_020.png"
+    }
+  },
+  {
+    "question_id": "Q_OCT_SCAN_020_T12",
+    "task_id": "T12",
+    "image_id": "OCT_SCAN_020",
+    "question": "What type of retinal lesion is outlined by the bounding box in this image?",
+    "options": {
+      "A": "Intraretinal Fluid (IRF)",
+      "B": "Subretinal Fluid (SRF)",
+      "C": "Subretinal Hyperreflective Material (SHRM)",
+      "D": "Pigment Epithelial Detachment (PED)"
+    },
+    "correct_answer": "D",
+    "explanation": "The lesion displays characteristic features matching PED based on boundary separation and reflectivity.",
+    "metadata": {
+      "disease_label": "AMD",
+      "rendered_image_path": "./data/generated_qa/images/OCT_SCAN_020_T12.png",
+      "dataset_source": "AMD-SD",
+      "original_image_path": "./data/raw/images/OCT_SCAN_020.png"
+    }
+  },
+  {
+    "question_id": "Q_OCT_SCAN_020_T17",
+    "task_id": "T17",
+    "image_id": "OCT_SCAN_020",
+    "question": "Based on the structural changes observed in this OCT scan, what is the most likely clinical diagnosis?",
+    "options": {
+      "A": "Healthy Retina",
+      "B": "Diabetic Macular Edema (DME)",
+      "C": "Central Serous Chorioretinopathy (CSC)",
+      "D": "Macular pathology (AMD)"
+    },
+    "correct_answer": "D",
+    "explanation": "The presence of structural anomalies and liquid accumulation matches criteria for AMD.",
+    "metadata": {
+      "disease_label": "AMD",
+      "rendered_image_path": "./data/generated_qa/images/OCT_SCAN_020_T17.png",
+      "dataset_source": "AMD-SD",
+      "original_image_path": "./data/raw/images/OCT_SCAN_020.png"
+    }
+  }
+]
