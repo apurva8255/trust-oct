@@ -1,20 +1,80 @@
-TrustOCT
-A Hallucination-Aware Vision-Language Framework for Trustworthy OCT Interpretation
-TrustOCT is an AI/ML research project focused on improving the
-reliability of multimodal large language models (MLLMs) for Optical
-Coherence Tomography (OCT) image interpretation.
-Instead of accepting only an AI model's final diagnosis, TrustOCT aims
-to examine and verify the intermediate clinical reasoning chain:
-Perception → Cognition → Reasoning → Verification → Final Output
-The project is motivated by OCT understanding benchmarks that show that
-strong visual perception does not necessarily translate into reliable
-anatomical understanding or clinical reasoning.
-Project Area: Artificial Intelligence, Machine Learning,
-Multimodal AI, Medical Image Analysis, Retrieval-Augmented Generation
-(RAG), Trustworthy AI
-SDG Alignment: UN SDG 3 --- Good Health and Well-being
+::: {align="center"}
+# 👁️ TrustOCT
 
-Problem Statement
+### A Hallucination-Aware Vision-Language Framework for Trustworthy OCT Interpretation
+
+```{=html}
+<p>
+```
+`<strong>`{=html}Multimodal AI • Medical Image Analysis • RAG •
+Trustworthy AI • Explainable AI`</strong>`{=html}
+```{=html}
+</p>
+```
+```{=html}
+<p>
+```
+`<img src="https://img.shields.io/badge/Domain-Medical%20AI-blue" alt="Medical AI"/>`{=html}
+`<img src="https://img.shields.io/badge/Imaging-OCT-purple" alt="OCT"/>`{=html}
+`<img src="https://img.shields.io/badge/AI-Multimodal%20LLM-orange" alt="Multimodal LLM"/>`{=html}
+`<img src="https://img.shields.io/badge/RAG-Evidence%20Retrieval-green" alt="RAG"/>`{=html}
+`<img src="https://img.shields.io/badge/SDG-3%20Good%20Health-red" alt="SDG 3"/>`{=html}
+`<img src="https://img.shields.io/badge/Status-Research%20Prototype-yellow" alt="Research Prototype"/>`{=html}
+```{=html}
+</p>
+```
+```{=html}
+<p>
+```
+`<em>`{=html}Moving from "What did the model predict?" to "Can we verify
+why it predicted it?"`</em>`{=html}
+```{=html}
+</p>
+```
+:::📌 Overview
+TrustOCT is an AI/ML research project focused on improving the
+reliability of Multimodal Large Language Models (MLLMs) for
+Optical Coherence Tomography (OCT) interpretation.
+Rather than accepting only the final disease prediction, TrustOCT aims
+to inspect and verify the model's intermediate clinical reasoning.
+::: {align="center"}
+### Perception → Cognition → Reasoning → Verification → Final Output
+:::<table>
+<tr>
+<td>
+<b>{=html}Project Area</b>{=html}
+</td>
+<td>
+AI/ML, Multimodal AI, Medical Image Analysis, RAG, Trustworthy AI
+</td>
+</tr>
+<tr>
+<td>
+<b>{=html}Primary Goal</b>{=html}
+</td>
+<td>
+Verify image-grounded and clinical claims before accepting an
+AI-generated OCT interpretation
+</td>
+</tr>
+<tr>
+<td>
+<b>{=html}SDG Alignment</b>{=html}
+</td>
+<td>
+UN SDG 3 --- Good Health and Well-being
+</td>
+</tr>
+<tr>
+<td>
+<b>{=html}Project Type</b>{=html}
+</td>
+<td>
+Academic Research / EDI Prototype
+</td>
+</tr>
+</table>
+🚨 Problem Statement
 Modern vision-language models can analyze medical images and generate
 clinical interpretations. However, a highly confident response is not
 necessarily clinically correct.
@@ -32,7 +92,7 @@ OCT Image → Disease Label
 TrustOCT instead investigates:
 What did the model see? → Where is the abnormality? → What does it
 clinically imply? → Is the conclusion supported by evidence?
-Objectives
+🎯 Objectives
 The main objectives of TrustOCT are to:
 1. Analyze OCT scans using multimodal vision-language models.
 2. Structure OCT interpretation into Perception, Cognition, and
@@ -47,7 +107,7 @@ The main objectives of TrustOCT are to:
    with available evidence.
 8. Evaluate whether verification improves reliability compared with a
    baseline MLLM.
-Cognitive Reasoning Framework
+🧠 Cognitive Reasoning Framework
 TrustOCT follows a hierarchical OCT interpretation process.
 1. Perception --- What is visible?
 The system examines low-level visual information such as:
@@ -74,7 +134,7 @@ tasks such as:
 - Disease-stage classification
 - Treatment-related reasoning
 - Follow-up reasoning
-Proposed TrustOCT Architecture
+🏗️ Proposed TrustOCT Architecture
                          OCT Image
                              |
                              v
@@ -109,7 +169,7 @@ Proposed TrustOCT Architecture
                              |
                              v
                  Verified / Abstained Output
-Claim-Level Verification
+🔍 Claim-Level Verification
 A central idea of TrustOCT is that the entire generated response should
 not be accepted or rejected as a single block.
 For example, suppose an MLLM generates:
@@ -139,7 +199,7 @@ material such as:
   guidelines
 - Consensus ophthalmology literature
 - Established ophthalmology references such as Ryan's Retina
-Retrieval-Augmented Generation (RAG)
+📚 Retrieval-Augmented Generation (RAG)
 Clinical documents can be converted into a searchable knowledge base:
 Clinical Guidelines / Literature
               |
@@ -163,7 +223,7 @@ Clinical Guidelines / Literature
 RAG is used for clinical knowledge verification. It does not by
 itself prove that a visual feature exists in a particular OCT image;
 image-grounded verification must be handled separately.
-Clinical Reasoning / Med-CoT
+🩺 Clinical Reasoning / Med-CoT
 Rather than forcing the MLLM to directly output a disease or answer,
 structured clinical reasoning can guide it through:
 Visual Perception
@@ -177,21 +237,21 @@ TrustOCT extends this idea by asking an additional question:
 Is the generated reasoning actually supported?
 Structured reasoning generates an explanation; TrustOCT's verification
 layer is intended to evaluate that explanation.
-Relationship with OCT-Bench
+🔬 Relationship with OCT-Bench
 OCT-Bench and TrustOCT serve different purposes.
-  OCT-Bench                           TrustOCT
-  Evaluates MLLMs                     Builds a reliability/verification
-                                      framework
-  Measures model performance          Checks generated clinical claims
-  Identifies failure points           Attempts to detect unsupported
-                                      reasoning
-  Perception → Cognition → Reasoning  Perception → Cognition → Reasoning
-                                      → Verification
-  Benchmark-focused                   Trustworthiness-focused
+  OCT-Bench                          TrustOCT
+  Evaluates MLLMs                    Builds a reliability/verification
+                                     framework
+  Measures model performance         Checks generated clinical claims
+  Identifies failure points          Attempts to detect unsupported
+                                     reasoning
+  Perception → Cognition → Reasoning Perception → Cognition → Reasoning
+                                     → Verification
+  Benchmark-focused                  Trustworthiness-focused
 TrustOCT is inspired by limitations exposed through hierarchical OCT
 evaluation; it should not be described as a modification of OCT-Bench
 unless the benchmark itself is directly extended.
-Evaluation Strategy
+📊 Evaluation Strategy
 The project can compare:
 Baseline
 OCT Image → MLLM → Final Answer
@@ -222,7 +282,7 @@ Potential evaluation measures include:
 - Additional inference latency
 The exact hallucination and evidence-consistency metrics should be
 finalized only after defining a validated ground-truth protocol.
-Target OCT Conditions
+👁️ Target OCT Conditions
 Depending on the final dataset, the system may evaluate retinal
 conditions such as:
 - Age-Related Macular Degeneration (AMD)
@@ -232,7 +292,7 @@ conditions such as:
 - Macular Hole (MH)
 Only conditions represented and validated in the final experimental
 dataset should be reported as supported by the implemented system.
-Proposed Technology Stack
+🛠️ Proposed Technology Stack
   Component            Technology
   Programming          Python
   Image Processing     OpenCV, Pillow
@@ -245,7 +305,7 @@ Proposed Technology Stack
   Evaluation           Scikit-learn / custom metrics
 The exact MLLM provider(s) should be documented once the experimental
 setup is finalized.
-Team Module Distribution
+👥 Team Module Distribution
 Module 1 --- Dataset & Computer Vision
 - OCT dataset preparation
 - Data normalization
@@ -274,7 +334,7 @@ Module 4 --- Trustworthiness & Evaluation
 - Hallucination analysis
 - Evaluation metrics
 - Dashboard and system integration
-Expected Contribution
+💡 Expected Contribution
 The intended contribution of TrustOCT is not simply to combine several
 AI models.
 The project investigates whether claim-level verification of an OCT
@@ -283,7 +343,7 @@ The central research question is:
 Can evidence-aware verification identify and reduce unsupported
 clinical reasoning in multimodal OCT interpretation?
 
-Limitations
+⚠️ Limitations
 - RAG quality depends on the quality and coverage of the indexed
   clinical sources.
 - Clinical evidence cannot independently verify whether an abnormality
@@ -296,7 +356,7 @@ Limitations
   clinical deployment.
 - TrustOCT is a research and evaluation project, not a replacement for
   an ophthalmologist.
-Future Scope
+🚀 Future Scope
 - Adaptive verification based on uncertainty
 - Multi-agent evidence verification
 - Visual grounding and saliency analysis
@@ -304,11 +364,11 @@ Future Scope
 - Risk-weighted clinical evaluation
 - Improved uncertainty calibration and abstention
 - Extension to other medical imaging modalities
-SDG Alignment
+🌍 SDG Alignment
 SDG 3 --- Good Health and Well-being
 TrustOCT aligns with SDG 3 through research into safer and more reliable
 AI-assisted medical image interpretation.
-Disclaimer
+⚕️ Disclaimer
 TrustOCT is intended for academic research and evaluation. It is not a
 certified medical device and should not be used for independent clinical
 diagnosis, treatment selection, or patient management.
