@@ -34,43 +34,44 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# Custom Styling (Dark Mode-friendly clean aesthetics)
+# Custom Styling (Light Theme)
 st.markdown("""
 <style>
     .main-title {
         font-size: 2.3rem;
         font-weight: 700;
-        color: #FF4B4B;
+        color: #1A73E8;
         margin-bottom: 0.2rem;
     }
     .sub-title {
         font-size: 1.05rem;
-        color: #9AA0A6;
+        color: #5F6368;
         margin-bottom: 1.5rem;
     }
     .metric-card {
-        background-color: #1E2329;
+        background-color: #F1F3F4;
         padding: 0.8rem;
         border-radius: 8px;
-        border: 1px solid #2B3139;
+        border: 1px solid #DADCE0;
         text-align: center;
     }
     .metric-value {
         font-size: 1.8rem;
         font-weight: 700;
-        color: #0ECB81;
+        color: #137333;
     }
     .metric-label {
         font-size: 0.85rem;
-        color: #AEB4BC;
+        color: #3C4043;
     }
     .cot-box {
-        background-color: #141E28;
-        border-left: 4px solid #00D2FF;
+        background-color: #F8F9FA;
+        border-left: 4px solid #1A73E8;
         padding: 1rem;
         border-radius: 4px;
         font-family: monospace;
         font-size: 0.92rem;
+        color: #202124;
     }
 </style>
 """, unsafe_allow_html=True)
@@ -413,8 +414,8 @@ with tab_analytics:
             title="<b>Performance Uplift: Zero-Shot Direct vs. Med-CoT Across Foundation Models</b>",
             color_discrete_sequence=["#5C6BC0", "#00E676"]
         )
-        fig_comp.add_vline(x=5.5, line_dash="dash", line_color="#FF5252", annotation_text="Baseline (25%)", annotation_position="top right")
-        fig_comp.update_layout(template="plotly_dark", height=400, margin=dict(l=20, r=20, t=40, b=20))
+        fig_comp.add_hline(y=25.0, line_dash="dash", line_color="#FF5252", annotation_text="Random Chance Baseline (25%)", annotation_position="top right")
+        fig_comp.update_layout(template="plotly_white", height=400, margin=dict(l=20, r=20, t=40, b=20))
         st.plotly_chart(fig_comp, use_container_width=True)
 
         st.info("💡 **Clinical Finding for Faculty:** Unimodal or direct zero-shot prompting forces models to guess letters without visual grounding. "
@@ -456,7 +457,7 @@ with tab_analytics:
         }
     )
     fig_bar.add_vline(x=25.0, line_dash="dash", line_color="#FF5252", annotation_text="Random Guess Baseline (25%)", annotation_position="top right")
-    fig_bar.update_layout(template="plotly_dark", height=380, margin=dict(l=20, r=20, t=40, b=20))
+    fig_bar.update_layout(template="plotly_white", height=380, margin=dict(l=20, r=20, t=40, b=20))
     st.plotly_chart(fig_bar, use_container_width=True)
 
     # Side-by-side: Cognitive Dimension Breakdown + Radar Chart
@@ -478,7 +479,7 @@ with tab_analytics:
             title="<b>Accuracy Drop Across Cognitive Pathway</b>",
             color_discrete_sequence=["#29B6F6", "#AB47BC", "#FFA726"]
         )
-        fig_dim.update_layout(template="plotly_dark", height=390, xaxis_tickangle=-30, margin=dict(l=20, r=20, t=40, b=20))
+        fig_dim.update_layout(template="plotly_white", height=390, xaxis_tickangle=-30, margin=dict(l=20, r=20, t=40, b=20))
         st.plotly_chart(fig_dim, use_container_width=True)
 
     with col_radar:
@@ -505,7 +506,7 @@ with tab_analytics:
         fig_radar.update_layout(
             polar=dict(radialaxis=dict(visible=True, range=[0, 85])),
             title="<b>Cognitive Dimension Triad Radar</b>",
-            template="plotly_dark",
+            template="plotly_white",
             height=390,
             margin=dict(l=30, r=30, t=40, b=20)
         )
@@ -539,7 +540,7 @@ with tab_analytics:
         title="<b>Granular Task Accuracy (%) Matrix [Perception (T01-08) | Cognition (T09-16) | Reasoning (T17-20)]</b>"
     )
     fig_heat.update_layout(
-        template="plotly_dark",
+        template="plotly_white",
         height=380,
         xaxis_tickangle=-45,
         margin=dict(l=20, r=20, t=40, b=20)
