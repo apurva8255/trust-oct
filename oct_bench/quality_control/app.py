@@ -21,6 +21,8 @@ import importlib
 import oct_bench.evaluation.models
 importlib.reload(oct_bench.evaluation.models)
 from oct_bench.evaluation.models import get_evaluator
+from oct_bench.evaluation.metrics import compute_all_metrics, bleu_score, rouge_l, hallucination_rate
+from oct_bench.data.augmentor import AUGMENTATIONS, get_augmentation_names, apply_augmentation
 
 import streamlit as st
 import plotly.express as px
@@ -101,10 +103,12 @@ st.markdown('<div class="sub-title">Hierarchical benchmark platform for Multimod
 questions = load_dataset()
 
 # Top level tabs
-tab_qc, tab_analytics, tab_live = st.tabs([
+tab_qc, tab_analytics, tab_live, tab_metrics, tab_robust = st.tabs([
     "👁️ Expert Quality Control",
     "📊 Benchmark Leaderboard & Heatmap",
-    "⚡ Live Model Inference"
+    "⚡ Live Model Inference",
+    "🔬 Advanced Metrics",
+    "🛡️ Robustness Testing",
 ])
 
 # ==============================================================================
