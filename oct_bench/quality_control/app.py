@@ -287,160 +287,110 @@ with tab_analytics:
     st.subheader("📊 MLLM Evaluation Leaderboard & Cognitive Heatmap")
     st.write("Comprehensive benchmarking results comparing multimodal foundation models across Perception, Cognition, and Clinical Reasoning.")
 
-    # Reference benchmark data codified from the paper
+    paper_results_path = os.path.join(PROJECT_ROOT, "data", "reference", "oct_bench_paper_results.csv")
+    paper_df = pd.read_csv(paper_results_path)
+    task_keys = [f"T{i:02d}" for i in range(1, 21)]
     reference_models = {
-        "GPT-4o": {
-            "overall": 61.4,
-            "overall_cot": 72.1,
-            "category": "Proprietary MLLM",
-            "Perception": 72.5, "Cognition": 58.2, "Reasoning": 45.1,
-            "Perception_cot": 75.0, "Cognition_cot": 68.5, "Reasoning_cot": 62.8,
-            "tasks": {"T01": 88.0, "T02": 78.5, "T03": 71.0, "T04": 69.5, "T05": 66.0, "T06": 68.0, "T07": 65.5, "T08": 73.0, "T09": 65.0, "T10": 62.5, "T11": 59.0, "T12": 61.0, "T13": 55.5, "T14": 57.0, "T15": 53.0, "T16": 52.5, "T17": 51.0, "T18": 46.5, "T19": 44.0, "T20": 39.0}
-        },
-        "Claude-3.5-Sonnet": {
-            "overall": 58.9,
-            "overall_cot": 69.4,
-            "category": "Proprietary MLLM",
-            "Perception": 70.0, "Cognition": 56.4, "Reasoning": 43.2,
-            "Perception_cot": 73.0, "Cognition_cot": 66.0, "Reasoning_cot": 59.2,
-            "tasks": {"T01": 85.0, "T02": 76.0, "T03": 69.0, "T04": 66.5, "T05": 64.0, "T06": 65.0, "T07": 62.0, "T08": 71.0, "T09": 63.0, "T10": 60.0, "T11": 57.0, "T12": 58.5, "T13": 54.0, "T14": 55.0, "T15": 51.5, "T16": 51.0, "T17": 49.0, "T18": 44.5, "T19": 42.0, "T20": 37.5}
-        },
-        "Gemini-1.5-Pro": {
-            "overall": 56.8,
-            "overall_cot": 67.2,
-            "category": "Proprietary MLLM",
-            "Perception": 67.5, "Cognition": 54.0, "Reasoning": 41.5,
-            "Perception_cot": 71.0, "Cognition_cot": 63.5, "Reasoning_cot": 57.0,
-            "tasks": {"T01": 83.0, "T02": 73.0, "T03": 66.0, "T04": 64.0, "T05": 61.5, "T06": 63.0, "T07": 59.5, "T08": 68.0, "T09": 60.5, "T10": 58.0, "T11": 54.5, "T12": 56.0, "T13": 52.0, "T14": 53.0, "T15": 49.0, "T16": 48.5, "T17": 47.0, "T18": 43.0, "T19": 40.5, "T20": 35.5}
-        },
-        "Qwen2-VL-7B": {
-            "overall": 52.3,
-            "overall_cot": 61.0,
-            "category": "Open-Source MLLM",
-            "Perception": 63.0, "Cognition": 49.8, "Reasoning": 37.0,
-            "Perception_cot": 66.0, "Cognition_cot": 57.5, "Reasoning_cot": 49.5,
-            "tasks": {"T01": 78.0, "T02": 69.0, "T03": 61.5, "T04": 60.0, "T05": 57.0, "T06": 58.0, "T07": 55.0, "T08": 64.0, "T09": 56.0, "T10": 53.5, "T11": 50.0, "T12": 51.5, "T13": 48.0, "T14": 49.0, "T15": 45.0, "T16": 44.5, "T17": 42.0, "T18": 39.0, "T19": 36.0, "T20": 31.0}
-        },
-        "LLaVA-Med-7B": {
-            "overall": 49.6,
-            "overall_cot": 57.8,
-            "category": "Medical-Domain MLLM",
-            "Perception": 58.5, "Cognition": 52.0, "Reasoning": 34.5,
-            "Perception_cot": 61.0, "Cognition_cot": 59.5, "Reasoning_cot": 46.0,
-            "tasks": {"T01": 72.0, "T02": 62.0, "T03": 57.0, "T04": 56.0, "T05": 53.0, "T06": 52.0, "T07": 50.0, "T08": 59.0, "T09": 58.0, "T10": 56.5, "T11": 52.0, "T12": 54.0, "T13": 50.0, "T14": 51.5, "T15": 47.0, "T16": 46.5, "T17": 39.0, "T18": 36.0, "T19": 33.5, "T20": 29.5}
-        },
-        "Med-Flamingo": {
-            "overall": 43.2,
-            "overall_cot": 50.5,
-            "category": "Medical-Domain MLLM",
-            "Perception": 51.0, "Cognition": 45.0, "Reasoning": 30.5,
-            "Perception_cot": 53.0, "Cognition_cot": 51.0, "Reasoning_cot": 40.5,
-            "tasks": {"T01": 65.0, "T02": 55.0, "T03": 50.0, "T04": 48.0, "T05": 46.0, "T06": 45.0, "T07": 43.0, "T08": 52.0, "T09": 50.0, "T10": 48.0, "T11": 45.0, "T12": 47.0, "T13": 44.0, "T14": 45.0, "T15": 41.0, "T16": 40.0, "T17": 35.0, "T18": 32.0, "T19": 29.5, "T20": 26.0}
-        },
-        "Random Baseline": {
-            "overall": 26.0,
-            "overall_cot": 26.0,
-            "category": "Validation Baseline",
-            "Perception": 27.5, "Cognition": 27.5, "Reasoning": 20.0,
-            "Perception_cot": 27.5, "Cognition_cot": 27.5, "Reasoning_cot": 20.0,
-            "tasks": {"T01": 15.0, "T02": 25.0, "T03": 25.0, "T04": 25.0, "T05": 25.0, "T06": 40.0, "T07": 25.0, "T08": 25.0, "T09": 25.0, "T10": 25.0, "T11": 25.0, "T12": 30.0, "T13": 25.0, "T14": 25.0, "T15": 25.0, "T16": 25.0, "T17": 20.0, "T18": 20.0, "T19": 20.0, "T20": 20.0}
+        row["model"]: {
+            "overall": float(row["overall"]),
+            "category": row["category"],
+            "Perception": float(row["perception"]),
+            "Cognition": float(row["cognition"]),
+            "Reasoning": float(row["reasoning"]),
+            "tasks": {task: float(row[task]) for task in task_keys},
         }
+        for _, row in paper_df.iterrows()
     }
 
-    # Dynamically overlay locally evaluated models from ./reports/
+    # Keep local runs separate from the published benchmark; they may use different data.
+    local_models = {}
     for csv_file in glob.glob("./reports/*_predictions.csv"):
         try:
             df_rep = pd.read_csv(csv_file)
-            m_slug = os.path.basename(csv_file).replace("_predictions.csv", "")
-            m_name = m_slug.replace("-", " ").replace("_", " ").title()
-            
-            if m_name not in reference_models and len(df_rep) > 0:
-                d_acc = df_rep.groupby("dimension")["is_correct"].mean() * 100
-                t_acc = df_rep.groupby("task_id")["is_correct"].mean() * 100
-                ov = round(float(df_rep["is_correct"].mean() * 100), 1)
-                reference_models[m_name] = {
-                    "overall": ov,
-                    "overall_cot": round(min(ov + 8.5, 95.0), 1),
-                    "category": "Evaluated Local Model",
-                    "Perception": round(float(d_acc.get("Perception", 25.0)), 1),
-                    "Cognition": round(float(d_acc.get("Cognition", 25.0)), 1),
-                    "Reasoning": round(float(d_acc.get("Reasoning", 25.0)), 1),
-                    "Perception_cot": round(float(d_acc.get("Perception", 25.0)) + 3.0, 1),
-                    "Cognition_cot": round(float(d_acc.get("Cognition", 25.0)) + 8.0, 1),
-                    "Reasoning_cot": round(float(d_acc.get("Reasoning", 25.0)) + 14.5, 1),
-                    "tasks": {f"T{i:02d}": round(float(t_acc.get(f"T{i:02d}", 25.0)), 1) for i in range(1, 21)}
-                }
-        except Exception:
-            pass
+        except (OSError, UnicodeDecodeError, pd.errors.EmptyDataError, pd.errors.ParserError) as err:
+            st.warning(f"Could not read report {os.path.basename(csv_file)}: {err}")
+            continue
+
+        if {"prediction", "correct_answer"}.issubset(df_rep.columns):
+            prediction = df_rep["prediction"].astype("string").str.strip().str.upper()
+            answer = df_rep["correct_answer"].astype("string").str.strip().str.upper()
+            valid_rows = prediction.notna() & answer.notna()
+            df_rep = df_rep.loc[valid_rows].copy()
+            df_rep["_is_correct"] = prediction.loc[valid_rows].eq(answer.loc[valid_rows])
+        elif "is_correct" in df_rep.columns:
+            correctness = df_rep["is_correct"].astype("string").str.strip().str.lower()
+            df_rep["_is_correct"] = correctness.map({"true": True, "false": False, "1": True, "0": False})
+            df_rep = df_rep.loc[df_rep["_is_correct"].notna()].copy()
+        else:
+            st.warning(f"Skipping report {os.path.basename(csv_file)}: no prediction/answer or is_correct columns.")
+            continue
+
+        if df_rep.empty:
+            st.warning(f"Skipping report {os.path.basename(csv_file)}: no valid prediction rows.")
+            continue
+
+        m_slug = os.path.basename(csv_file).replace("_predictions.csv", "")
+        m_name = (
+            "Random Baseline (Local)"
+            if "random" in m_slug.lower()
+            else m_slug.replace("-", " ").replace("_", " ").title()
+        )
+        d_acc = (
+            df_rep.groupby("dimension")["_is_correct"].mean() * 100
+            if "dimension" in df_rep.columns
+            else pd.Series(dtype=float)
+        )
+        t_acc = (
+            df_rep.groupby("task_id")["_is_correct"].mean() * 100
+            if "task_id" in df_rep.columns
+            else pd.Series(dtype=float)
+        )
+        local_models[m_name] = {
+            "overall": float(df_rep["_is_correct"].mean() * 100),
+            "category": "Evaluated Local Model",
+            "Perception": float(d_acc["Perception"]) if "Perception" in d_acc else None,
+            "Cognition": float(d_acc["Cognition"]) if "Cognition" in d_acc else None,
+            "Reasoning": float(d_acc["Reasoning"]) if "Reasoning" in d_acc else None,
+            "tasks": {
+                task: float(t_acc[task])
+                for task in task_keys
+                if task in t_acc
+            },
+        }
 
     # Top KPI Metrics Row
+    best_model, best_scores = max(reference_models.items(), key=lambda item: item[1]["overall"])
+    published_model_count = len(reference_models)
+    local_model_count = len(local_models)
     kpi1, kpi2, kpi3, kpi4 = st.columns(4)
     with kpi1:
-        st.metric("🏆 Top Performing Model", "GPT-4o (Med-CoT)", "72.1% (+10.7% CoT Boost)")
+        st.metric("🏆 Top Measured Model", best_model, f"{best_scores['overall']:.2f}% accuracy")
     with kpi2:
-        st.metric("🤖 Models Benchmarked", f"{len(reference_models)} Models", "Commercial & Open-Source")
+        st.metric("📄 Published Models", f"{published_model_count}")
     with kpi3:
         st.metric("🎯 Chance Baseline", "25.0%", "4-Option Random Guess")
     with kpi4:
-        st.metric("🧠 Med-CoT Reasoning Gain", "+17.7%", "Reduces Hallucinations")
+        st.metric("🧪 Local Models", f"{local_model_count}")
+
+    st.caption(
+        "Published results: Fu et al., *Can Multimodal Large Language Models Understand OCT?*, "
+        "Tables 2–3 (zero-shot): https://arxiv.org/html/2607.16609. "
+        "Local results use the separate dataset in ./reports and are not directly comparable to published scores."
+    )
 
     st.markdown("---")
 
-    # Prompting Paradigm Mode Selector
-    prompt_mode = st.radio(
-        "**Select Prompting Paradigm / Mode:**",
-        ["Zero-Shot Direct (Standard)", "Clinical Chain-of-Thought (Med-CoT)", "📊 Compare Zero-Shot vs. Med-CoT"],
-        horizontal=True
-    )
+    st.info("Published OCT-Bench results use zero-shot evaluation. CoT comparisons are omitted because no paired CoT results are available.")
 
-    if prompt_mode == "📊 Compare Zero-Shot vs. Med-CoT":
-        st.markdown("#### 🔬 Comparative Impact: Zero-Shot Direct vs. Clinical Chain-of-Thought (Med-CoT)")
-        st.write("Evaluating whether forcing the model to explicitly reason through **Visual Perception ➔ Anatomical Mapping ➔ Clinical Guidelines** boosts diagnostic performance.")
-        
-        comp_rows = []
-        for m, d in reference_models.items():
-            comp_rows.append({
-                "Model": m,
-                "Zero-Shot Direct": d["overall"],
-                "Clinical CoT (Med-CoT)": d.get("overall_cot", d["overall"]),
-                "Net CoT Gain": f"+{d.get('overall_cot', d['overall']) - d['overall']:.1f}%"
-            })
-        df_comp = pd.DataFrame(comp_rows)
-
-        df_comp_melt = df_comp.melt(id_vars=["Model", "Net CoT Gain"], value_vars=["Zero-Shot Direct", "Clinical CoT (Med-CoT)"], var_name="Evaluation Paradigm", value_name="Overall Accuracy (%)")
-        fig_comp = px.bar(
-            df_comp_melt,
-            x="Model",
-            y="Overall Accuracy (%)",
-            color="Evaluation Paradigm",
-            barmode="group",
-            text="Overall Accuracy (%)",
-            title="<b>Performance Uplift: Zero-Shot Direct vs. Med-CoT Across Foundation Models</b>",
-            color_discrete_sequence=["#5C6BC0", "#00E676"]
-        )
-        fig_comp.add_hline(y=25.0, line_dash="dash", line_color="#FF5252", annotation_text="Random Chance Baseline (25%)", annotation_position="top right")
-        fig_comp.update_layout(template="plotly_white", height=400, margin=dict(l=20, r=20, t=40, b=20))
-        st.plotly_chart(fig_comp, use_container_width=True)
-
-        st.info("💡 **Clinical Finding for Faculty:** Unimodal or direct zero-shot prompting forces models to guess letters without visual grounding. "
-                "Enforcing a **Clinical Chain-of-Thought (Med-CoT)** protocol yields an average **+10.1% overall accuracy boost**, with the largest uplift (+17.7%) concentrated in high-stakes reasoning tasks (T17: Diagnosis, T19: Treatment Planning).")
-
-    # Overall Leaderboard
     leaderboard_rows = []
     for m, d in reference_models.items():
-        is_cot_active = (prompt_mode == "Clinical Chain-of-Thought (Med-CoT)")
-        acc = d.get("overall_cot", d["overall"]) if is_cot_active else d["overall"]
-        p_acc = d.get("Perception_cot", d["Perception"]) if is_cot_active else d["Perception"]
-        c_acc = d.get("Cognition_cot", d["Cognition"]) if is_cot_active else d["Cognition"]
-        r_acc = d.get("Reasoning_cot", d["Reasoning"]) if is_cot_active else d["Reasoning"]
-
         leaderboard_rows.append({
             "Model": m,
-            "Accuracy (%)": acc,
+            "Accuracy (%)": d["overall"],
             "Category": d["category"],
-            "Perception": p_acc,
-            "Cognition": c_acc,
-            "Reasoning": r_acc
+            "Perception": d["Perception"],
+            "Cognition": d["Cognition"],
+            "Reasoning": d["Reasoning"]
         })
     df_lb = pd.DataFrame(leaderboard_rows).sort_values("Accuracy (%)", ascending=True)
 
@@ -450,18 +400,21 @@ with tab_analytics:
         y="Model",
         orientation="h",
         color="Category",
-        text="Accuracy (%)",
-        title=f"<b>Overall Benchmark Accuracy ({prompt_mode})</b>",
+        text_auto=".1f",
+        title="<b>Published OCT-Bench Overall Accuracy (Zero-Shot)</b>",
         color_discrete_map={
-            "Proprietary MLLM": "#4285F4",
-            "Open-Source MLLM": "#00C853",
-            "Medical-Domain MLLM": "#AA00FF",
-            "Evaluated Local Model": "#FF9100",
-            "Validation Baseline": "#757575"
+            "Closed-Source Models": "#4285F4",
+            "Open-Source Models": "#00C853",
+            "Medical-Domain Models": "#AA00FF",
         }
     )
     fig_bar.add_vline(x=25.0, line_dash="dash", line_color="#FF5252", annotation_text="Random Guess Baseline (25%)", annotation_position="top right")
-    fig_bar.update_layout(template="plotly_white", height=380, margin=dict(l=20, r=20, t=40, b=20))
+    fig_bar.update_layout(
+        template="plotly_white",
+        height=max(380, len(df_lb) * 42),
+        xaxis_range=[0, 105],
+        margin=dict(l=20, r=20, t=50, b=20)
+    )
     st.plotly_chart(fig_bar, use_container_width=True)
 
     # Side-by-side: Cognitive Dimension Breakdown + Radar Chart
@@ -480,23 +433,44 @@ with tab_analytics:
             y="Dimension Accuracy (%)",
             color="Cognitive Dimension",
             barmode="group",
+            text_auto=".1f",
             title="<b>Accuracy Drop Across Cognitive Pathway</b>",
             color_discrete_sequence=["#29B6F6", "#AB47BC", "#FFA726"]
         )
-        fig_dim.update_layout(template="plotly_white", height=390, xaxis_tickangle=-30, margin=dict(l=20, r=20, t=40, b=20))
+        fig_dim.update_layout(
+            template="plotly_white",
+            height=420,
+            yaxis_range=[0, 105],
+            xaxis_tickangle=-30,
+            margin=dict(l=20, r=20, t=50, b=20)
+        )
         st.plotly_chart(fig_dim, use_container_width=True)
 
     with col_radar:
+        all_radar_avail = [
+            model for model, scores in reference_models.items()
+            if all(scores[dimension] is not None for dimension in ("Perception", "Cognition", "Reasoning"))
+        ]
+        default_radar = [
+            model for model in ["GPT-5.4-mini", "Gemini-2.5-flash", "Hulu-Med-32B"]
+            if model in all_radar_avail
+        ]
+        selected_radar = st.multiselect(
+            "Select Models to Compare on Radar:",
+            options=all_radar_avail,
+            default=default_radar,
+            key="radar_models_multiselect"
+        )
+
         fig_radar = go.Figure()
         categories = ["Perception", "Cognition", "Reasoning"]
-        radar_models = ["GPT-4o", "Claude-3.5-Sonnet", "LLaVA-Med-7B", "Random Baseline"]
-        radar_colors = ["#4285F4", "#AB47BC", "#00E676", "#FF5252"]
+        radar_colors = px.colors.qualitative.Plotly
 
-        for idx, rm in enumerate(radar_models):
+        for idx, rm in enumerate(selected_radar):
             if rm in reference_models:
-                p_val = reference_models[rm]["Perception_cot"] if prompt_mode == "Clinical Chain-of-Thought (Med-CoT)" else reference_models[rm]["Perception"]
-                c_val = reference_models[rm]["Cognition_cot"] if prompt_mode == "Clinical Chain-of-Thought (Med-CoT)" else reference_models[rm]["Cognition"]
-                r_val = reference_models[rm]["Reasoning_cot"] if prompt_mode == "Clinical Chain-of-Thought (Med-CoT)" else reference_models[rm]["Reasoning"]
+                p_val = reference_models[rm]["Perception"]
+                c_val = reference_models[rm]["Cognition"]
+                r_val = reference_models[rm]["Reasoning"]
                 vals = [p_val, c_val, r_val]
                 vals_closed = vals + [vals[0]]
                 cats_closed = categories + [categories[0]]
@@ -504,15 +478,17 @@ with tab_analytics:
                     r=vals_closed,
                     theta=cats_closed,
                     name=rm,
-                    line_color=radar_colors[idx % len(radar_colors)]
+                    fill="toself",
+                    opacity=0.15,
+                    line=dict(color=radar_colors[idx % len(radar_colors)], width=2)
                 ))
 
         fig_radar.update_layout(
-            polar=dict(radialaxis=dict(visible=True, range=[0, 85])),
+            polar=dict(radialaxis=dict(visible=True, range=[0, 100], ticksuffix="%")),
             title="<b>Cognitive Dimension Triad Radar</b>",
             template="plotly_white",
-            height=390,
-            margin=dict(l=30, r=30, t=40, b=20)
+            height=420,
+            margin=dict(l=30, r=30, t=50, b=20)
         )
         st.plotly_chart(fig_radar, use_container_width=True)
 
@@ -531,7 +507,7 @@ with tab_analytics:
     heatmap_matrix = []
 
     for m in heatmap_models:
-        row = [reference_models[m]["tasks"].get(tk, 25.0) for tk in task_keys]
+        row = [reference_models[m]["tasks"].get(tk, float("nan")) for tk in task_keys]
         heatmap_matrix.append(row)
 
     fig_heat = px.imshow(
@@ -540,14 +516,17 @@ with tab_analytics:
         y=heatmap_models,
         text_auto=".1f",
         aspect="auto",
+        zmin=0,
+        zmax=100,
         color_continuous_scale="Viridis",
-        title="<b>Granular Task Accuracy (%) Matrix [Perception (T01-08) | Cognition (T09-16) | Reasoning (T17-20)]</b>"
+        title="<b>Granular Task Accuracy (%) Matrix [Perception (T01-08) | Cognition (T09-16) | Reasoning (T17-20)]</b>",
+        labels=dict(x="Clinical Task", y="Model", color="Accuracy (%)")
     )
     fig_heat.update_layout(
         template="plotly_white",
-        height=380,
+        height=max(380, len(heatmap_models) * 38 + 120),
         xaxis_tickangle=-45,
-        margin=dict(l=20, r=20, t=40, b=20)
+        margin=dict(l=20, r=20, t=50, b=20)
     )
     st.plotly_chart(fig_heat, use_container_width=True)
 
@@ -555,6 +534,97 @@ with tab_analytics:
     st.markdown("### 📋 Full Benchmark Leaderboard Table")
     df_display = pd.DataFrame(leaderboard_rows)[["Model", "Category", "Accuracy (%)", "Perception", "Cognition", "Reasoning"]].sort_values("Accuracy (%)", ascending=False)
     st.dataframe(df_display, use_container_width=True)
+
+    if local_models:
+        st.markdown("### Local Evaluation Results")
+        st.caption("These runs use the local dataset and are shown separately; they are not directly comparable to OCT-Bench paper scores.")
+        local_rows = [
+            {
+                "Model": model,
+                "Accuracy (%)": scores["overall"],
+                "Perception": scores["Perception"],
+                "Cognition": scores["Cognition"],
+                "Reasoning": scores["Reasoning"],
+            }
+            for model, scores in local_models.items()
+        ]
+        df_local = pd.DataFrame(local_rows).sort_values("Accuracy (%)", ascending=True)
+        st.dataframe(df_local, use_container_width=True)
+
+        col_local_acc, col_local_dim = st.columns(2)
+        with col_local_acc:
+            fig_local_acc = px.bar(
+                df_local,
+                x="Accuracy (%)",
+                y="Model",
+                orientation="h",
+                text_auto=".1f",
+                title="<b>Local-Run Accuracy</b>",
+                color_discrete_sequence=["#FF9100"],
+            )
+            fig_local_acc.add_vline(
+                x=25.0,
+                line_dash="dash",
+                line_color="#FF5252",
+                annotation_text="4-choice chance (25%)",
+            )
+            fig_local_acc.update_layout(
+                template="plotly_white",
+                xaxis_range=[0, 105],
+                height=max(300, len(df_local) * 42),
+            )
+            st.plotly_chart(fig_local_acc, use_container_width=True)
+
+        with col_local_dim:
+            local_dim = df_local.melt(
+                id_vars=["Model"],
+                value_vars=["Perception", "Cognition", "Reasoning"],
+                var_name="Dimension",
+                value_name="Dimension Accuracy (%)",
+            ).dropna(subset=["Dimension Accuracy (%)"])
+            if not local_dim.empty:
+                fig_local_dim = px.bar(
+                    local_dim,
+                    x="Model",
+                    y="Dimension Accuracy (%)",
+                    color="Dimension",
+                    barmode="group",
+                    text_auto=".1f",
+                    title="<b>Local-Run Accuracy by Tested Dimension</b>",
+                    color_discrete_sequence=["#29B6F6", "#AB47BC", "#FFA726"],
+                )
+                fig_local_dim.update_layout(
+                    template="plotly_white",
+                    yaxis_range=[0, 105],
+                    height=380,
+                    xaxis_tickangle=-30,
+                )
+                st.plotly_chart(fig_local_dim, use_container_width=True)
+
+        local_task_models = [model for model, scores in local_models.items() if scores["tasks"]]
+        if local_task_models:
+            local_task_matrix = [
+                [local_models[model]["tasks"].get(task, float("nan")) for task in task_keys]
+                for model in local_task_models
+            ]
+            fig_local_heat = px.imshow(
+                local_task_matrix,
+                x=task_labels,
+                y=local_task_models,
+                text_auto=".1f",
+                aspect="auto",
+                zmin=0,
+                zmax=100,
+                color_continuous_scale="Viridis",
+                title="<b>Local-Run Task Accuracy (Blank = Not Evaluated)</b>",
+                labels=dict(x="Clinical Task", y="Model", color="Accuracy (%)"),
+            )
+            fig_local_heat.update_layout(
+                template="plotly_white",
+                height=max(300, len(local_task_models) * 38 + 120),
+                xaxis_tickangle=-45,
+            )
+            st.plotly_chart(fig_local_heat, use_container_width=True)
 
 # ==============================================================================
 # TAB 3: LIVE MODEL INFERENCE & EVALUATION (WITH MED-COT)
@@ -675,29 +745,395 @@ with tab_live:
             
             # Save results into reports for dynamic dashboard pickup
             try:
-                os.makedirs("./reports", exist_ok=True)
-                out_csv = f"./reports/{clean_name}_predictions.csv"
-                export_data = []
-                for idx, r in enumerate(live_results):
-                    orig_q = subset_questions[idx]
-                    tid = orig_q["task_id"]
-                    dim = "Reasoning"
-                    if tid.startswith(('T01', 'T02', 'T03', 'T04', 'T05', 'T06', 'T07', 'T08')):
-                        dim = "Perception"
-                    elif tid.startswith(('T09', 'T10', 'T11', 'T12', 'T13', 'T14', 'T15', 'T16')):
-                        dim = "Cognition"
-                    export_data.append({
-                        "question_id": r["Question ID"],
-                        "task_id": tid,
-                        "dimension": dim,
-                        "disease": orig_q.get("metadata", {}).get("disease_label", "NORMAL"),
-                        "question": orig_q["question"],
-                        "options": str(orig_q["options"]),
-                        "correct_answer": r["Ground Truth"],
-                        "prediction": r["Prediction"],
-                        "is_correct": (r["Prediction"] == r["Ground Truth"])
-                    })
-                pd.DataFrame(export_data).to_csv(out_csv, index=False)
-                st.info(f"Saved evaluation results to `{out_csv}`. Switch to the **'📊 Benchmark Leaderboard & Heatmap'** tab to see updated comparisons!")
+                error_count = sum(1 for r in live_results if "Error:" in str(r.get("Med-CoT Reasoning", "")))
+                if error_count == len(live_results) and len(live_results) > 0:
+                    st.warning("⚠️ All sample inferences failed with an API/network error (missing or invalid API key). "
+                               "The run was NOT saved to `./reports/` to prevent distorting benchmark leaderboards.")
+                else:
+                    os.makedirs("./reports", exist_ok=True)
+                    out_csv = f"./reports/{clean_name}_predictions.csv"
+                    export_data = []
+                    for idx, r in enumerate(live_results):
+                        orig_q = subset_questions[idx]
+                        tid = orig_q["task_id"]
+                        dim = "Reasoning"
+                        if tid.startswith(('T01', 'T02', 'T03', 'T04', 'T05', 'T06', 'T07', 'T08')):
+                            dim = "Perception"
+                        elif tid.startswith(('T09', 'T10', 'T11', 'T12', 'T13', 'T14', 'T15', 'T16')):
+                            dim = "Cognition"
+                        export_data.append({
+                            "question_id": r["Question ID"],
+                            "task_id": tid,
+                            "dimension": dim,
+                            "disease": orig_q.get("metadata", {}).get("disease_label", "NORMAL"),
+                            "question": orig_q["question"],
+                            "options": str(orig_q["options"]),
+                            "correct_answer": r["Ground Truth"],
+                            "prediction": r["Prediction"],
+                            "is_correct": (r["Prediction"] == r["Ground Truth"])
+                        })
+                    pd.DataFrame(export_data).to_csv(out_csv, index=False)
+                    st.info(f"Saved evaluation results to `{out_csv}`. Switch to the **'📊 Benchmark Leaderboard & Heatmap'** tab to see updated comparisons!")
             except Exception as e:
                 st.warning(f"Could not persist report to disk: {e}")
+
+# ==============================================================================
+# TAB 4: ADVANCED METRICS
+# ==============================================================================
+with tab_metrics:
+    st.subheader("🔬 Evaluation Accuracy & Answer-Text Similarity")
+    st.write(
+        "Prediction reports contain multiple-choice answers, not free-text clinical explanations. "
+        "Accuracy is scored against the selected answer; BLEU and ROUGE-L compare selected option text only."
+    )
+
+    report_files = glob.glob("./reports/*_predictions.csv")
+
+    if not report_files:
+        st.info("No evaluated model reports found in `./reports/`. Run live evaluations in the '⚡ Live Model Inference' tab or via `run_pipeline.py` first.")
+    else:
+        st.markdown("#### 📈 Benchmark Model Comparison on Advanced Metrics")
+
+        # Match reports to the benchmark's answer-option text, excluding explanations.
+        q_ref_map = {}
+        for q in questions:
+            correct_opt = q.get("correct_answer", "")
+            opt_text = q.get("options", {}).get(correct_opt, "")
+            q_ref_map[q["question_id"]] = opt_text
+
+        metrics_summary = []
+        for fpath in report_files:
+            try:
+                df = pd.read_csv(fpath)
+            except (OSError, UnicodeDecodeError, pd.errors.EmptyDataError, pd.errors.ParserError) as e:
+                st.warning(f"Error reading report {os.path.basename(fpath)}: {e}")
+                continue
+
+            if df.empty or not {"prediction", "correct_answer"}.issubset(df.columns):
+                st.warning(f"Skipping report {os.path.basename(fpath)}: missing prediction or correct_answer data.")
+                continue
+
+            m_slug = os.path.basename(fpath).replace("_predictions.csv", "")
+            m_title = m_slug.replace("-", " ").replace("_", " ").title()
+            preds_list = []
+            refs_list = []
+            corr_list = []
+
+            for _, row in df.iterrows():
+                pred_letter = str(row["prediction"]).strip().upper()
+                correct_letter = str(row["correct_answer"]).strip().upper()
+                corr_list.append(pred_letter == correct_letter)
+
+                opts_dict = {}
+                opts_raw = row.get("options", "")
+                if isinstance(opts_raw, str) and opts_raw.startswith("{"):
+                    import ast
+                    try:
+                        parsed_options = ast.literal_eval(opts_raw)
+                    except (ValueError, SyntaxError):
+                        parsed_options = {}
+                    if isinstance(parsed_options, dict):
+                        opts_dict = parsed_options
+
+                qid = str(row.get("question_id", ""))
+                pred_text = opts_dict.get(pred_letter)
+                ref_text = opts_dict.get(correct_letter) or q_ref_map.get(qid)
+                if isinstance(pred_text, str) and isinstance(ref_text, str):
+                    preds_list.append(pred_text)
+                    refs_list.append(ref_text)
+
+            lexical_metrics = (
+                compute_all_metrics(preds_list, refs_list, [True] * len(preds_list))
+                if preds_list
+                else {}
+            )
+            metrics_summary.append({
+                "Model": m_title,
+                "Total Samples": len(df),
+                "Text Samples": len(preds_list),
+                "Accuracy (%)": sum(corr_list) / len(corr_list) * 100,
+                "BLEU-1": lexical_metrics.get("BLEU-1", float("nan")),
+                "BLEU-2": lexical_metrics.get("BLEU-2", float("nan")),
+                "BLEU-4": lexical_metrics.get("BLEU-4", float("nan")),
+                "ROUGE-L": lexical_metrics.get("ROUGE-L", float("nan")),
+            })
+
+        if metrics_summary:
+            df_m = pd.DataFrame(metrics_summary)
+            df_m = df_m.sort_values(by="Accuracy (%)", ascending=False)
+            st.dataframe(df_m, use_container_width=True)
+            st.caption("Answer-text overlap is not a measure of clinical reasoning or hallucination.")
+
+            col_g1, col_g2 = st.columns(2)
+            with col_g1:
+                fig_acc = px.bar(
+                    df_m, x="Model", y="Accuracy (%)", color="Model",
+                    title="<b>Model Accuracy (%) Comparison</b>",
+                    text_auto=".1f", color_discrete_sequence=px.colors.qualitative.Prism
+                )
+                fig_acc.update_layout(template="plotly_white", showlegend=False, yaxis_range=[0, 105], height=380, margin=dict(l=20, r=20, t=50, b=20))
+                st.plotly_chart(fig_acc, use_container_width=True)
+
+            with col_g2:
+                fig_lexical = px.bar(
+                    df_m, x="Model", y=["BLEU-1", "BLEU-2", "BLEU-4", "ROUGE-L"],
+                    barmode="group",
+                    text_auto=".1f",
+                    title="<b>MCQ Answer-Option Text Overlap (Not Clinical Prose)</b>",
+                    labels={"value": "Overlap score (0-100)", "variable": "Metric"}
+                )
+                fig_lexical.update_layout(template="plotly_white", yaxis_range=[0, 105], height=380, margin=dict(l=20, r=20, t=50, b=20))
+                st.plotly_chart(fig_lexical, use_container_width=True)
+
+    # Interactive Metric Calculator Playground
+    st.markdown("---")
+    st.markdown("#### 🧪 Live Sentence-Level Metric Playground")
+    st.write("Explore text-overlap metrics and a keyword-overlap heuristic. The heuristic is not a clinical hallucination detector.")
+
+    col_p1, col_p2 = st.columns(2)
+    with col_p1:
+        default_hyp = "The OCT scan displays intraretinal fluid pockets in the neurosensory layer consistent with diabetic macular edema."
+        hyp_input = st.text_area("Hypothesis (Model Generation):", value=default_hyp, height=110)
+    with col_p2:
+        default_ref = "Cross-sectional OCT reveals intraretinal fluid (IRF) and hyperreflective spots indicative of DME."
+        ref_input = st.text_area("Reference (Clinical Ground Truth):", value=default_ref, height=110)
+
+    if st.button("Calculate Metrics for Sample"):
+        if hyp_input and ref_input:
+            b_scores = bleu_score(hyp_input, ref_input, max_n=4)
+            r_score = rouge_l(hyp_input, ref_input)
+            h_info = hallucination_rate([hyp_input], [ref_input])
+
+            c1, c2, c3, c4, c5 = st.columns(5)
+            c1.metric("BLEU-1", f"{b_scores.get('BLEU-1', 0):.1f}%")
+            c2.metric("BLEU-2", f"{b_scores.get('BLEU-2', 0):.1f}%")
+            c3.metric("BLEU-4", f"{b_scores.get('BLEU-4', 0):.1f}%")
+            c4.metric("ROUGE-L", f"{r_score:.1f}%")
+            c5.metric(
+                "Keyword-mismatch heuristic",
+                "Flagged ⚠️" if h_info["flagged_count"] > 0 else "No flag",
+            )
+
+            from oct_bench.evaluation.metrics import _CLINICAL_KEYWORDS
+            hyp_kws = set(hyp_input.lower().split()) & _CLINICAL_KEYWORDS
+            ref_kws = set(ref_input.lower().split()) & _CLINICAL_KEYWORDS
+            st.markdown(f"**Clinical terms in Reference:** `{', '.join(sorted(ref_kws)) if ref_kws else 'None'}`")
+            st.markdown(f"**Clinical terms in Hypothesis:** `{', '.join(sorted(hyp_kws)) if hyp_kws else 'None'}`")
+            overlap = hyp_kws & ref_kws
+            st.markdown(f"**Shared Clinical Grounding:** `{', '.join(sorted(overlap)) if overlap else 'None'}`")
+
+
+# ==============================================================================
+# TAB 5: ROBUSTNESS & DEGRADATION TESTING
+# ==============================================================================
+with tab_robust:
+    st.subheader("🛡️ Model Robustness & Optical Degradation Testing")
+    st.write(
+        "Evaluate vision-language models under real-world imaging noise, motion blur, and low contrast "
+        "to stress-test reliability and diagnostic robustness."
+    )
+
+    if not questions:
+        st.warning("No questions loaded. Please generate or load a dataset first.")
+    else:
+        q_options = [f"{q['question_id']} — {q['task_id']} ({q.get('metadata', {}).get('disease_label', 'OCT')})" for q in questions]
+        selected_q_label = st.selectbox("Select Benchmark Sample to Perturb:", q_options)
+        selected_idx = q_options.index(selected_q_label)
+        target_q = questions[selected_idx]
+
+        img_path = target_q.get("metadata", {}).get("rendered_image_path", target_q.get("rendered_image_path", ""))
+
+        if not os.path.exists(img_path):
+            st.error(f"Image not found at path: `{img_path}`")
+        else:
+            orig_img = Image.open(img_path)
+
+            aug_names = get_augmentation_names()
+            col_aug1, col_aug2 = st.columns([1, 1])
+            with col_aug1:
+                chosen_aug = st.selectbox("Select Optical Perturbation / Noise Type:", aug_names)
+            with col_aug2:
+                robust_model_choice = st.selectbox(
+                    "Model to Test:",
+                    [
+                        "Random Guess Baseline (Offline Control)",
+                        "Google Gemini (gemini-2.5-flash)",
+                        "OpenAI GPT-4o (gpt-4o)",
+                        "Anthropic Claude 3.5 Sonnet (claude-3-5-sonnet)",
+                        "Local Ollama Vision (llava)",
+                        "Groq LLaMA 3.2 Vision (llama-3.2-11b-vision-preview)",
+                        "Hugging Face (Qwen/Qwen2-VL-7B-Instruct)"
+                    ],
+                    key="robust_model"
+                )
+
+            perturbed_img = apply_augmentation(orig_img, chosen_aug)
+
+            st.markdown("#### 🖼️ Visual Comparison: Clean Scan vs Perturbed Scan")
+            col_img1, col_img2 = st.columns(2)
+            with col_img1:
+                st.image(orig_img, caption="Original Clean OCT Scan", use_container_width=True)
+            with col_img2:
+                st.image(perturbed_img, caption=f"Perturbed OCT Scan: {chosen_aug}", use_container_width=True)
+
+            st.markdown(f"**Question:** {target_q['question']}")
+            st.markdown(f"**Options:**")
+            for opt_k, opt_v in target_q.get("options", {}).items():
+                is_correct_tag = " (✅ Ground Truth)" if opt_k == target_q["correct_answer"] else ""
+                st.markdown(f"- **{opt_k}:** {opt_v}{is_correct_tag}")
+
+            if st.button("⚡ Run Robustness Inference on Both Scans", type="primary"):
+                temp_dir = "./data/temp_robustness"
+                os.makedirs(temp_dir, exist_ok=True)
+                perturbed_path = os.path.join(temp_dir, f"perturbed_{os.path.basename(img_path)}")
+                perturbed_img.save(perturbed_path)
+
+                eval_key = "random"
+                if "Gemini" in robust_model_choice:
+                    eval_key = "gemini"
+                elif "OpenAI" in robust_model_choice:
+                    eval_key = "openai"
+                elif "Claude" in robust_model_choice:
+                    eval_key = "claude"
+                elif "Ollama" in robust_model_choice:
+                    eval_key = "ollama"
+                elif "Groq" in robust_model_choice:
+                    eval_key = "groq"
+                elif "Hugging Face" in robust_model_choice:
+                    eval_key = "huggingface"
+
+                eval_obj = get_evaluator(eval_key)
+
+                with st.spinner("Evaluating Clean vs Corrupted image..."):
+                    if hasattr(eval_obj, "predict_with_reasoning"):
+                        pred_clean, _ = eval_obj.predict_with_reasoning(
+                            img_path, target_q["question"], target_q["options"], cot=False
+                        )
+                        pred_aug, _ = eval_obj.predict_with_reasoning(
+                            perturbed_path, target_q["question"], target_q["options"], cot=False
+                        )
+                    else:
+                        pred_clean = eval_obj.predict(img_path, target_q["question"], target_q["options"])
+                        pred_aug = eval_obj.predict(perturbed_path, target_q["question"], target_q["options"])
+
+                gt = target_q["correct_answer"]
+                clean_correct = (pred_clean == gt)
+                aug_correct = (pred_aug == gt)
+
+                st.markdown("---")
+                st.markdown("#### 🎯 Robustness Comparison Results:")
+                r_col1, r_col2, r_col3 = st.columns(3)
+                with r_col1:
+                    st.metric("Ground Truth", gt)
+                with r_col2:
+                    st.metric("Clean Image Prediction", f"{pred_clean} ({'✅ Correct' if clean_correct else '❌ Incorrect'})")
+                with r_col3:
+                    st.metric("Perturbed Image Prediction", f"{pred_aug} ({'✅ Correct' if aug_correct else '❌ Incorrect'})")
+
+                if clean_correct and not aug_correct:
+                    st.error(f"⚠️ **Vulnerability Detected:** The model answered correctly on the clean image, but flipped to an incorrect answer (`{pred_aug}`) under **{chosen_aug}**!")
+                elif clean_correct and aug_correct:
+                    st.success(f"🛡️ **Robust:** The model maintained the correct prediction (`{gt}`) despite **{chosen_aug}** degradation!")
+                elif not clean_correct and not aug_correct:
+                    st.info(f"The model failed on both clean (`{pred_clean}`) and perturbed (`{pred_aug}`) inputs.")
+                else:
+                    st.warning(f"Unexpected perturbation result: incorrect on clean (`{pred_clean}`), but predicted `{pred_aug}` on corrupted.")
+
+        st.markdown("---")
+        st.markdown("#### 📊 Batch Degradation Stress Test")
+        st.write("Run the selected model over the same samples in clean and perturbed conditions.")
+
+        batch_n = st.slider("Select batch size for stress testing:", min_value=5, max_value=min(20, len(questions)), value=5, step=5)
+        batch_aug = st.selectbox("Perturbation to apply to entire batch:", aug_names, key="batch_aug")
+
+        if st.button("🚀 Run Batch Degradation Benchmark"):
+            temp_dir = "./data/temp_robustness"
+            os.makedirs(temp_dir, exist_ok=True)
+            test_samples = questions[:batch_n]
+
+            clean_correct_count = 0
+            corrupt_correct_count = 0
+            evaluated_count = 0
+
+            batch_eval_key = "random"
+            if "Gemini" in robust_model_choice:
+                batch_eval_key = "gemini"
+            elif "OpenAI" in robust_model_choice:
+                batch_eval_key = "openai"
+            elif "Claude" in robust_model_choice:
+                batch_eval_key = "claude"
+            elif "Ollama" in robust_model_choice:
+                batch_eval_key = "ollama"
+            elif "Groq" in robust_model_choice:
+                batch_eval_key = "groq"
+            elif "Hugging Face" in robust_model_choice:
+                batch_eval_key = "huggingface"
+            eval_obj = get_evaluator(batch_eval_key)
+            if batch_eval_key == "random":
+                st.info("The random baseline ignores the image; its clean/corrupted difference is sampling noise, not visual robustness.")
+
+            b_progress = st.progress(0)
+            for b_i, q_sample in enumerate(test_samples):
+                c_path = q_sample.get("metadata", {}).get("rendered_image_path", q_sample.get("rendered_image_path", ""))
+                gt = q_sample["correct_answer"]
+
+                if not os.path.exists(c_path):
+                    st.warning(f"Skipping sample {q_sample['question_id']}: image not found at {c_path}")
+                    b_progress.progress((b_i + 1) / len(test_samples))
+                    continue
+
+                p_img = apply_augmentation(Image.open(c_path), batch_aug)
+                p_path = os.path.join(temp_dir, f"batch_{b_i}_{os.path.basename(c_path)}")
+                p_img.save(p_path)
+
+                p_c = eval_obj.predict(c_path, q_sample["question"], q_sample["options"])
+                p_a = eval_obj.predict(p_path, q_sample["question"], q_sample["options"])
+                evaluated_count += 1
+
+                if p_c == gt:
+                    clean_correct_count += 1
+                if p_a == gt:
+                    corrupt_correct_count += 1
+
+                b_progress.progress((b_i + 1) / len(test_samples))
+
+            if evaluated_count == 0:
+                st.error("No valid images were available for the batch; no accuracy chart was generated.")
+            else:
+                clean_acc = (clean_correct_count / evaluated_count) * 100
+                corrupt_acc = (corrupt_correct_count / evaluated_count) * 100
+                drop = clean_acc - corrupt_acc
+
+                c_res1, c_res2, c_res3 = st.columns(3)
+                c_res1.metric("Clean Accuracy", f"{clean_acc:.1f}%")
+                c_res2.metric("Corrupted Accuracy", f"{corrupt_acc:.1f}%")
+                c_res3.metric("Performance Drop", f"{drop:+.1f}%")
+                st.caption(f"Based on {evaluated_count} valid samples using {robust_model_choice}.")
+
+                clean_label = f"Clean Scans (n={evaluated_count})"
+                corrupt_label = f"Corrupted (n={evaluated_count})"
+                df_batch = pd.DataFrame([
+                    {"Condition": clean_label, "Accuracy (%)": clean_acc},
+                    {"Condition": f"{corrupt_label}: {batch_aug}", "Accuracy (%)": corrupt_acc}
+                ])
+                fig_batch = px.bar(
+                    df_batch,
+                    x="Condition",
+                    y="Accuracy (%)",
+                    color="Condition",
+                    text_auto=".1f",
+                    title=f"<b>{robust_model_choice}: Clean vs. {batch_aug}</b>",
+                    color_discrete_map={
+                        clean_label: "#4285F4",
+                        f"{corrupt_label}: {batch_aug}": "#EA4335"
+                    }
+                )
+                fig_batch.update_layout(
+                    template="plotly_white",
+                    showlegend=False,
+                    yaxis_range=[0, 105],
+                    height=380,
+                    margin=dict(l=20, r=20, t=50, b=20)
+                )
+                st.plotly_chart(fig_batch, use_container_width=True)
+

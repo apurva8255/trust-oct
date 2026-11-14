@@ -2,244 +2,23 @@
   {
     "image_id": "OCT_SCAN_001",
     "image_path": "./data/raw\\images\\OCT_SCAN_001.png",
-    "dataset_source": "AMD-SD",
+    "dataset_source": "OCT5k",
     "width": 512,
     "height": 256,
-    "disease_label": "CSC",
-    "bboxes": [
-      {
-        "coords": [
-          180,
-          132,
-          340,
-          182
-        ],
-        "label": "SRF",
-        "description": "Hyporeflective subretinal fluid accumulation"
-      }
-    ],
+    "disease_label": "NORMAL",
+    "bboxes": [],
     "clinical_attributes": {
-      "age": 78,
+      "age": 76,
       "gender": "Female",
       "eye": "OS",
       "scan_quality": "High",
-      "visual_acuity": "20/80"
+      "visual_acuity": "20/40"
     }
   },
   {
     "image_id": "OCT_SCAN_002",
     "image_path": "./data/raw\\images\\OCT_SCAN_002.png",
-    "dataset_source": "OIMHS",
-    "width": 512,
-    "height": 256,
-    "disease_label": "NORMAL",
-    "bboxes": [],
-    "clinical_attributes": {
-      "age": 63,
-      "gender": "Male",
-      "eye": "OD",
-      "scan_quality": "High",
-      "visual_acuity": "20/20"
-    }
-  },
-  {
-    "image_id": "OCT_SCAN_003",
-    "image_path": "./data/raw\\images\\OCT_SCAN_003.png",
-    "dataset_source": "OIMHS",
-    "width": 512,
-    "height": 256,
-    "disease_label": "CSC",
-    "bboxes": [
-      {
-        "coords": [
-          180,
-          132,
-          340,
-          182
-        ],
-        "label": "SRF",
-        "description": "Hyporeflective subretinal fluid accumulation"
-      }
-    ],
-    "clinical_attributes": {
-      "age": 58,
-      "gender": "Female",
-      "eye": "OD",
-      "scan_quality": "High",
-      "visual_acuity": "20/20"
-    }
-  },
-  {
-    "image_id": "OCT_SCAN_004",
-    "image_path": "./data/raw\\images\\OCT_SCAN_004.png",
-    "dataset_source": "OIMHS",
-    "width": 512,
-    "height": 256,
-    "disease_label": "AMD",
-    "bboxes": [
-      {
-        "coords": [
-          200,
-          132,
-          320,
-          191
-        ],
-        "label": "PED",
-        "description": "Pigment epithelial detachment showing elevated RPE boundary"
-      }
-    ],
-    "clinical_attributes": {
-      "age": 72,
-      "gender": "Male",
-      "eye": "OS",
-      "scan_quality": "Medium",
-      "visual_acuity": "20/80"
-    }
-  },
-  {
-    "image_id": "OCT_SCAN_005",
-    "image_path": "./data/raw\\images\\OCT_SCAN_005.png",
     "dataset_source": "AMD-SD",
-    "width": 512,
-    "height": 256,
-    "disease_label": "NORMAL",
-    "bboxes": [],
-    "clinical_attributes": {
-      "age": 77,
-      "gender": "Female",
-      "eye": "OS",
-      "scan_quality": "High",
-      "visual_acuity": "20/40"
-    }
-  },
-  {
-    "image_id": "OCT_SCAN_006",
-    "image_path": "./data/raw\\images\\OCT_SCAN_006.png",
-    "dataset_source": "OCTDL",
-    "width": 512,
-    "height": 256,
-    "disease_label": "NORMAL",
-    "bboxes": [],
-    "clinical_attributes": {
-      "age": 50,
-      "gender": "Female",
-      "eye": "OD",
-      "scan_quality": "Medium",
-      "visual_acuity": "20/60"
-    }
-  },
-  {
-    "image_id": "OCT_SCAN_007",
-    "image_path": "./data/raw\\images\\OCT_SCAN_007.png",
-    "dataset_source": "OCTDL",
-    "width": 512,
-    "height": 256,
-    "disease_label": "AMD",
-    "bboxes": [
-      {
-        "coords": [
-          200,
-          132,
-          320,
-          191
-        ],
-        "label": "PED",
-        "description": "Pigment epithelial detachment showing elevated RPE boundary"
-      }
-    ],
-    "clinical_attributes": {
-      "age": 65,
-      "gender": "Female",
-      "eye": "OS",
-      "scan_quality": "High",
-      "visual_acuity": "20/40"
-    }
-  },
-  {
-    "image_id": "OCT_SCAN_008",
-    "image_path": "./data/raw\\images\\OCT_SCAN_008.png",
-    "dataset_source": "OIMHS",
-    "width": 512,
-    "height": 256,
-    "disease_label": "CSC",
-    "bboxes": [
-      {
-        "coords": [
-          180,
-          132,
-          340,
-          182
-        ],
-        "label": "SRF",
-        "description": "Hyporeflective subretinal fluid accumulation"
-      }
-    ],
-    "clinical_attributes": {
-      "age": 55,
-      "gender": "Male",
-      "eye": "OD",
-      "scan_quality": "Medium",
-      "visual_acuity": "20/30"
-    }
-  },
-  {
-    "image_id": "OCT_SCAN_009",
-    "image_path": "./data/raw\\images\\OCT_SCAN_009.png",
-    "dataset_source": "OCTDL",
-    "width": 512,
-    "height": 256,
-    "disease_label": "MH",
-    "bboxes": [
-      {
-        "coords": [
-          240,
-          105,
-          272,
-          178
-        ],
-        "label": "MH",
-        "description": "Full-thickness macular hole showing tissue defect"
-      }
-    ],
-    "clinical_attributes": {
-      "age": 71,
-      "gender": "Male",
-      "eye": "OD",
-      "scan_quality": "High",
-      "visual_acuity": "20/30"
-    }
-  },
-  {
-    "image_id": "OCT_SCAN_010",
-    "image_path": "./data/raw\\images\\OCT_SCAN_010.png",
-    "dataset_source": "AMD-SD",
-    "width": 512,
-    "height": 256,
-    "disease_label": "MH",
-    "bboxes": [
-      {
-        "coords": [
-          240,
-          105,
-          272,
-          178
-        ],
-        "label": "MH",
-        "description": "Full-thickness macular hole showing tissue defect"
-      }
-    ],
-    "clinical_attributes": {
-      "age": 61,
-      "gender": "Female",
-      "eye": "OS",
-      "scan_quality": "Medium",
-      "visual_acuity": "20/20"
-    }
-  },
-  {
-    "image_id": "OCT_SCAN_011",
-    "image_path": "./data/raw\\images\\OCT_SCAN_011.png",
-    "dataset_source": "OCTDL",
     "width": 512,
     "height": 256,
     "disease_label": "MH",
@@ -257,32 +36,169 @@
     ],
     "clinical_attributes": {
       "age": 80,
-      "gender": "Male",
+      "gender": "Female",
       "eye": "OS",
       "scan_quality": "Medium",
       "visual_acuity": "20/80"
     }
   },
   {
-    "image_id": "OCT_SCAN_012",
-    "image_path": "./data/raw\\images\\OCT_SCAN_012.png",
+    "image_id": "OCT_SCAN_003",
+    "image_path": "./data/raw\\images\\OCT_SCAN_003.png",
+    "dataset_source": "AMD-SD",
+    "width": 512,
+    "height": 256,
+    "disease_label": "DME",
+    "bboxes": [
+      {
+        "coords": [
+          208,
+          102,
+          232,
+          118
+        ],
+        "label": "IRF",
+        "description": "Intraretinal fluid cystoid space"
+      },
+      {
+        "coords": [
+          248,
+          97,
+          272,
+          113
+        ],
+        "label": "IRF",
+        "description": "Intraretinal fluid cystoid space"
+      },
+      {
+        "coords": [
+          288,
+          107,
+          312,
+          123
+        ],
+        "label": "IRF",
+        "description": "Intraretinal fluid cystoid space"
+      }
+    ],
+    "clinical_attributes": {
+      "age": 62,
+      "gender": "Female",
+      "eye": "OS",
+      "scan_quality": "Medium",
+      "visual_acuity": "20/20"
+    }
+  },
+  {
+    "image_id": "OCT_SCAN_004",
+    "image_path": "./data/raw\\images\\OCT_SCAN_004.png",
+    "dataset_source": "OCT5k",
+    "width": 512,
+    "height": 256,
+    "disease_label": "CSC",
+    "bboxes": [
+      {
+        "coords": [
+          180,
+          132,
+          340,
+          182
+        ],
+        "label": "SRF",
+        "description": "Hyporeflective subretinal fluid accumulation"
+      }
+    ],
+    "clinical_attributes": {
+      "age": 61,
+      "gender": "Male",
+      "eye": "OD",
+      "scan_quality": "Medium",
+      "visual_acuity": "20/80"
+    }
+  },
+  {
+    "image_id": "OCT_SCAN_005",
+    "image_path": "./data/raw\\images\\OCT_SCAN_005.png",
+    "dataset_source": "OIMHS",
+    "width": 512,
+    "height": 256,
+    "disease_label": "NORMAL",
+    "bboxes": [],
+    "clinical_attributes": {
+      "age": 63,
+      "gender": "Female",
+      "eye": "OS",
+      "scan_quality": "Medium",
+      "visual_acuity": "20/60"
+    }
+  },
+  {
+    "image_id": "OCT_SCAN_006",
+    "image_path": "./data/raw\\images\\OCT_SCAN_006.png",
     "dataset_source": "OCTDL",
     "width": 512,
     "height": 256,
     "disease_label": "NORMAL",
     "bboxes": [],
     "clinical_attributes": {
-      "age": 71,
-      "gender": "Female",
-      "eye": "OD",
+      "age": 62,
+      "gender": "Male",
+      "eye": "OS",
       "scan_quality": "Medium",
-      "visual_acuity": "20/30"
+      "visual_acuity": "20/60"
     }
   },
   {
-    "image_id": "OCT_SCAN_013",
-    "image_path": "./data/raw\\images\\OCT_SCAN_013.png",
-    "dataset_source": "OCTDL",
+    "image_id": "OCT_SCAN_007",
+    "image_path": "./data/raw\\images\\OCT_SCAN_007.png",
+    "dataset_source": "OCT5k",
+    "width": 512,
+    "height": 256,
+    "disease_label": "DME",
+    "bboxes": [
+      {
+        "coords": [
+          208,
+          102,
+          232,
+          118
+        ],
+        "label": "IRF",
+        "description": "Intraretinal fluid cystoid space"
+      },
+      {
+        "coords": [
+          248,
+          97,
+          272,
+          113
+        ],
+        "label": "IRF",
+        "description": "Intraretinal fluid cystoid space"
+      },
+      {
+        "coords": [
+          288,
+          107,
+          312,
+          123
+        ],
+        "label": "IRF",
+        "description": "Intraretinal fluid cystoid space"
+      }
+    ],
+    "clinical_attributes": {
+      "age": 51,
+      "gender": "Male",
+      "eye": "OS",
+      "scan_quality": "Medium",
+      "visual_acuity": "20/60"
+    }
+  },
+  {
+    "image_id": "OCT_SCAN_008",
+    "image_path": "./data/raw\\images\\OCT_SCAN_008.png",
+    "dataset_source": "AMD-SD",
     "width": 512,
     "height": 256,
     "disease_label": "AMD",
@@ -299,17 +215,17 @@
       }
     ],
     "clinical_attributes": {
-      "age": 73,
-      "gender": "Male",
-      "eye": "OD",
-      "scan_quality": "High",
+      "age": 51,
+      "gender": "Female",
+      "eye": "OS",
+      "scan_quality": "Medium",
       "visual_acuity": "20/40"
     }
   },
   {
-    "image_id": "OCT_SCAN_014",
-    "image_path": "./data/raw\\images\\OCT_SCAN_014.png",
-    "dataset_source": "AMD-SD",
+    "image_id": "OCT_SCAN_009",
+    "image_path": "./data/raw\\images\\OCT_SCAN_009.png",
+    "dataset_source": "OCTDL",
     "width": 512,
     "height": 256,
     "disease_label": "NORMAL",
@@ -318,13 +234,162 @@
       "age": 67,
       "gender": "Female",
       "eye": "OS",
+      "scan_quality": "Medium",
+      "visual_acuity": "20/60"
+    }
+  },
+  {
+    "image_id": "OCT_SCAN_010",
+    "image_path": "./data/raw\\images\\OCT_SCAN_010.png",
+    "dataset_source": "OCTDL",
+    "width": 512,
+    "height": 256,
+    "disease_label": "CSC",
+    "bboxes": [
+      {
+        "coords": [
+          180,
+          132,
+          340,
+          182
+        ],
+        "label": "SRF",
+        "description": "Hyporeflective subretinal fluid accumulation"
+      }
+    ],
+    "clinical_attributes": {
+      "age": 64,
+      "gender": "Male",
+      "eye": "OD",
+      "scan_quality": "Medium",
+      "visual_acuity": "20/40"
+    }
+  },
+  {
+    "image_id": "OCT_SCAN_011",
+    "image_path": "./data/raw\\images\\OCT_SCAN_011.png",
+    "dataset_source": "OCTDL",
+    "width": 512,
+    "height": 256,
+    "disease_label": "DME",
+    "bboxes": [
+      {
+        "coords": [
+          208,
+          102,
+          232,
+          118
+        ],
+        "label": "IRF",
+        "description": "Intraretinal fluid cystoid space"
+      },
+      {
+        "coords": [
+          248,
+          97,
+          272,
+          113
+        ],
+        "label": "IRF",
+        "description": "Intraretinal fluid cystoid space"
+      },
+      {
+        "coords": [
+          288,
+          107,
+          312,
+          123
+        ],
+        "label": "IRF",
+        "description": "Intraretinal fluid cystoid space"
+      }
+    ],
+    "clinical_attributes": {
+      "age": 52,
+      "gender": "Female",
+      "eye": "OD",
       "scan_quality": "High",
+      "visual_acuity": "20/40"
+    }
+  },
+  {
+    "image_id": "OCT_SCAN_012",
+    "image_path": "./data/raw\\images\\OCT_SCAN_012.png",
+    "dataset_source": "OCT5k",
+    "width": 512,
+    "height": 256,
+    "disease_label": "NORMAL",
+    "bboxes": [],
+    "clinical_attributes": {
+      "age": 51,
+      "gender": "Male",
+      "eye": "OD",
+      "scan_quality": "Medium",
+      "visual_acuity": "20/30"
+    }
+  },
+  {
+    "image_id": "OCT_SCAN_013",
+    "image_path": "./data/raw\\images\\OCT_SCAN_013.png",
+    "dataset_source": "OCT5k",
+    "width": 512,
+    "height": 256,
+    "disease_label": "CSC",
+    "bboxes": [
+      {
+        "coords": [
+          180,
+          132,
+          340,
+          182
+        ],
+        "label": "SRF",
+        "description": "Hyporeflective subretinal fluid accumulation"
+      }
+    ],
+    "clinical_attributes": {
+      "age": 52,
+      "gender": "Female",
+      "eye": "OS",
+      "scan_quality": "Medium",
       "visual_acuity": "20/20"
+    }
+  },
+  {
+    "image_id": "OCT_SCAN_014",
+    "image_path": "./data/raw\\images\\OCT_SCAN_014.png",
+    "dataset_source": "OIMHS",
+    "width": 512,
+    "height": 256,
+    "disease_label": "NORMAL",
+    "bboxes": [],
+    "clinical_attributes": {
+      "age": 65,
+      "gender": "Male",
+      "eye": "OD",
+      "scan_quality": "High",
+      "visual_acuity": "20/60"
     }
   },
   {
     "image_id": "OCT_SCAN_015",
     "image_path": "./data/raw\\images\\OCT_SCAN_015.png",
+    "dataset_source": "OCT5k",
+    "width": 512,
+    "height": 256,
+    "disease_label": "NORMAL",
+    "bboxes": [],
+    "clinical_attributes": {
+      "age": 69,
+      "gender": "Female",
+      "eye": "OD",
+      "scan_quality": "High",
+      "visual_acuity": "20/80"
+    }
+  },
+  {
+    "image_id": "OCT_SCAN_016",
+    "image_path": "./data/raw\\images\\OCT_SCAN_016.png",
     "dataset_source": "AMD-SD",
     "width": 512,
     "height": 256,
@@ -364,56 +429,9 @@
     "clinical_attributes": {
       "age": 68,
       "gender": "Female",
-      "eye": "OD",
-      "scan_quality": "Medium",
-      "visual_acuity": "20/80"
-    }
-  },
-  {
-    "image_id": "OCT_SCAN_016",
-    "image_path": "./data/raw\\images\\OCT_SCAN_016.png",
-    "dataset_source": "OCT5k",
-    "width": 512,
-    "height": 256,
-    "disease_label": "DME",
-    "bboxes": [
-      {
-        "coords": [
-          208,
-          102,
-          232,
-          118
-        ],
-        "label": "IRF",
-        "description": "Intraretinal fluid cystoid space"
-      },
-      {
-        "coords": [
-          248,
-          97,
-          272,
-          113
-        ],
-        "label": "IRF",
-        "description": "Intraretinal fluid cystoid space"
-      },
-      {
-        "coords": [
-          288,
-          107,
-          312,
-          123
-        ],
-        "label": "IRF",
-        "description": "Intraretinal fluid cystoid space"
-      }
-    ],
-    "clinical_attributes": {
-      "age": 66,
-      "gender": "Male",
       "eye": "OS",
-      "scan_quality": "Medium",
-      "visual_acuity": "20/20"
+      "scan_quality": "High",
+      "visual_acuity": "20/30"
     }
   },
   {
@@ -422,25 +440,25 @@
     "dataset_source": "OCT5k",
     "width": 512,
     "height": 256,
-    "disease_label": "CSC",
+    "disease_label": "MH",
     "bboxes": [
       {
         "coords": [
-          180,
-          132,
-          340,
-          182
+          240,
+          105,
+          272,
+          178
         ],
-        "label": "SRF",
-        "description": "Hyporeflective subretinal fluid accumulation"
+        "label": "MH",
+        "description": "Full-thickness macular hole showing tissue defect"
       }
     ],
     "clinical_attributes": {
-      "age": 50,
+      "age": 51,
       "gender": "Male",
-      "eye": "OS",
+      "eye": "OD",
       "scan_quality": "High",
-      "visual_acuity": "20/20"
+      "visual_acuity": "20/80"
     }
   },
   {
@@ -452,65 +470,65 @@
     "disease_label": "NORMAL",
     "bboxes": [],
     "clinical_attributes": {
-      "age": 56,
-      "gender": "Female",
+      "age": 50,
+      "gender": "Male",
       "eye": "OS",
       "scan_quality": "Medium",
-      "visual_acuity": "20/60"
+      "visual_acuity": "20/80"
     }
   },
   {
     "image_id": "OCT_SCAN_019",
     "image_path": "./data/raw\\images\\OCT_SCAN_019.png",
-    "dataset_source": "OCTDL",
+    "dataset_source": "OIMHS",
     "width": 512,
     "height": 256,
-    "disease_label": "AMD",
+    "disease_label": "MH",
     "bboxes": [
       {
         "coords": [
-          200,
-          132,
-          320,
-          191
+          240,
+          105,
+          272,
+          178
         ],
-        "label": "PED",
-        "description": "Pigment epithelial detachment showing elevated RPE boundary"
+        "label": "MH",
+        "description": "Full-thickness macular hole showing tissue defect"
       }
     ],
     "clinical_attributes": {
-      "age": 56,
-      "gender": "Female",
+      "age": 51,
+      "gender": "Male",
       "eye": "OD",
       "scan_quality": "Medium",
-      "visual_acuity": "20/80"
+      "visual_acuity": "20/60"
     }
   },
   {
     "image_id": "OCT_SCAN_020",
     "image_path": "./data/raw\\images\\OCT_SCAN_020.png",
-    "dataset_source": "AMD-SD",
+    "dataset_source": "OIMHS",
     "width": 512,
     "height": 256,
-    "disease_label": "AMD",
+    "disease_label": "MH",
     "bboxes": [
       {
         "coords": [
-          200,
-          132,
-          320,
-          191
+          240,
+          105,
+          272,
+          178
         ],
-        "label": "PED",
-        "description": "Pigment epithelial detachment showing elevated RPE boundary"
+        "label": "MH",
+        "description": "Full-thickness macular hole showing tissue defect"
       }
     ],
     "clinical_attributes": {
-      "age": 58,
-      "gender": "Male",
-      "eye": "OS",
+      "age": 72,
+      "gender": "Female",
+      "eye": "OD",
       "scan_quality": "High",
-      "visual_acuity": "20/80"
+      "visual_acuity": "20/60"
     }
   }
 ]
